@@ -12,7 +12,7 @@
 .marquee-content {
   display: flex;
   height: 100%;
-  animation: scrollX 60s linear 0s infinite;
+  animation: scrollX 50s linear 0s infinite;
   animation-play-state: running;
 }
 
@@ -33,4 +33,21 @@
   padding: 0 10px;
   border-radius: 20px 0px;
   
+}
+@media (min-width:600px) and (max-width: 1400px)  {
+  .marquee-content {
+    display: flex;
+    height: 100%;
+    animation: scrollX 25s linear 0s infinite;
+    animation-play-state: running;
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee-content {
+    display: flex;
+    height: 100%;
+    animation: scrollX 15s linear 0s infinite;
+    animation-play-state: running;
+  }
 }
