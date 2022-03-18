@@ -12,7 +12,7 @@
 .marquee-content {
   display: flex;
   height: 100%;
-  animation: scrollX 20s linear 0s infinite;
+  animation: scrollX 60s linear 0s infinite;
   animation-play-state: running;
 }
 
@@ -28,8 +28,9 @@
 
 .marquee-content img {
   display: flex;
-  width: 110%;
+  width: 100%;
   white-space: nowrap;
   padding: 0 10px;
-  border-radius: 20px;
+  border-radius: 20px 0px;
+  
 }

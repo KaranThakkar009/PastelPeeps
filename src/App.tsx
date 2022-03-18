@@ -1,8 +1,35 @@
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import "./App.css";
 
 function App() {
   return (
     <main className="app">
+      <AppBar position="static" className="bar-background" style={{marginBottom:"5rem"}}>
+        <Toolbar >
+          <img src={""} className="logo-img" />
+
+
+           PastelPeeps
+
+          {/* <Button
+            variant="contained"
+            color="secondary"
+            onClick={openDialog}
+            endIcon={<AccountBalanceWalletIcon />}
+       
+            className="connect-btn"
+          >
+            {userAddress
+              ? userAddress.slice(0, 5) + "..." + userAddress.slice(-5)
+              : "Connect"}
+          </Button>
+          <SimpleDialog
+            selectedValue={selectedValue}
+            open={open}
+            onClose={handleClose}
+          /> */}
+        </Toolbar>
+      </AppBar>
       <div className="marquee">
         <div className="marquee-content">
           <img
@@ -16,6 +43,7 @@ function App() {
           <img
             src="https://nft.tinyfac.es/static/media/character6.887b065876892a3bc33b.jpg"
             alt=""
+
           />
           <img
             src="https://nft.tinyfac.es/static/media/character7.5dc1143d6e41e775d01f.jpg"
