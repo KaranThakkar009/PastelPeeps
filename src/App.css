@@ -11,21 +11,25 @@
 
 .marquee-content {
   display: flex;
-  flex-shrink: 0;
   height: 100%;
-  animation: scrollX 10s linear infinite;
+  animation: scrollX 20s linear 0s infinite;
+  animation-play-state: running;
 }
 
 @keyframes scrollX {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(30%);
+    /* -300vw = no.of images * width of each img (15images*20vw) */
+    transform: translateX(-232vw);
   }
 }
 
 .marquee-content img {
+  display: flex;
+  width: 110%;
+  white-space: nowrap;
   padding: 0 10px;
   border-radius: 20px;
 }
