@@ -1,19 +1,66 @@
-.app {
-  height: 100vh;
-  width: 100vw;
+:root {
+  --marquee-width: 100vw;
+  --marquee-height: fit-content;
+  --marquee-elements: 14;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(
+    var(--marquee-width) / var(--marquee-elements-displayed)
+  );
+  --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
 }
 
-.marquee {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.menu-options {
+  list-style: none;
+}
+
+.menu-options li {
+  display: inline-block;
+  padding: 0 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.connect-btn {
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  background-color: #8dfcff;
+}
+
+/* .app {
+  height: 100vh;
   width: 100vw;
-  height: 300px;
+} */
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
   overflow: hidden;
+  background-color: inherit;
 }
 
 .marquee-content {
   display: flex;
-  height: 100%;
-  animation: scrollX 20s linear 0s infinite;
-  animation-play-state: running;
+  max-height: 300px;
+  animation: scrollX var(--marquee-animation-duration) linear infinite;
 }
 
 @keyframes scrollX {
@@ -21,15 +68,26 @@
     transform: translateX(0);
   }
   100% {
-    /* -300vw = no.of images * width of each img (15images*20vw) */
-    transform: translateX(-232vw);
+    /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
+    transform: translateX(
+      calc(-1 * (var(--marquee-element-width) * var(--marquee-elements)))
+    );
   }
 }
 
 .marquee-content img {
   display: flex;
-  width: 110%;
+  flex-shrink: 0;
+  width: 20vw;
   white-space: nowrap;
-  padding: 0 10px;
-  border-radius: 20px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: fit-content;
+    --marquee-elements-displayed: 3;
+  }
 }

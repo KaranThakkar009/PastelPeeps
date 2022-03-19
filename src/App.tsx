@@ -2,7 +2,23 @@ import "./App.css";
 
 function App() {
   return (
-    <main className="app">
+    <>
+      {/* <header className="header">
+        <div className="logo">PastelPeeps</div>
+        <nav>
+          <ul className="menu-options">
+            <li>Menu</li>
+            <li>Prelude</li>
+            <li>Metaverse Mall</li>
+            <li>FAQs</li>
+            <li>Twitter</li>
+            <li>Discord</li>
+            <li>Instagram</li>
+          </ul>
+        </nav>
+        <button className="connect-btn">Connect</button>
+      </header> */}
+
       <div className="marquee">
         <div className="marquee-content">
           <img
@@ -82,17 +98,17 @@ function App() {
             src="https://nft.tinyfac.es/static/media/character8.a09f097065b0483eec56.jpg"
             alt=""
           />
-          <img
+          {/* <img
             src="https://nft.tinyfac.es/static/media/character15.ab1f4b32469e93d54104.jpg"
             alt=""
           />
           <img
             src="https://nft.tinyfac.es/static/media/character13.67344d9c9b864a39b6cb.jpg"
             alt=""
-          />
+          /> */}
         </div>
       </div>
-    </main>
+    </>
   );
 }
 
