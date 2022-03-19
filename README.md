@@ -1,6 +1,6 @@
 # Create React App example with TypeScript
 
-## How to use
+## How to use (uppdated)
 
 Download the example [or clone the repo](https://github.com/mui-org/material-ui):
 
