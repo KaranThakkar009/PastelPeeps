@@ -9,32 +9,136 @@
   --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 2rem;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.2);
+/* nav bar styles */
+nav {
+  height: 80px;
+  background: transparent;
 }
 
-.logo {
-  cursor: pointer;
+nav img {
+  width: 150px;
+  position: absolute;
+  top: 17px;
+  left: 12%;
 }
 
-.menu-options {
-  list-style: none;
+nav ul {
+  z-index: 99;
+  float: right;
+  margin-right: 25px;
 }
 
-.menu-options li {
+nav ul li {
   display: inline-block;
-  padding: 0 15px;
-  cursor: pointer;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: black;
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+}
+
+nav ul li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+label #btn,
+label #cancel {
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 944) {
+  nav ul li a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1118px) {
+  nav img {
+    left: 8%;
+  }
+}
+
+@media (max-width: 944px) {
+  nav img {
+    left: 6%;
+    top: 20px;
+    width: 130px;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 860px) {
+  label #btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #34495e;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+  }
 }
 
 .connect-btn {
+  color: white;
   cursor: pointer;
   outline: none;
   font-size: 16px;
@@ -42,8 +146,10 @@
   border: none;
   border-radius: 10px;
   letter-spacing: 1px;
-  background-color: #8dfcff;
+  background-color: #445092;
 }
+
+/* nav bar styles ends */
 
 /* .app {
   height: 100vh;
@@ -82,12 +188,4 @@
   white-space: nowrap;
   border: 3px solid transparent;
   border-radius: 10px;
-}
-
-@media (max-width: 600px) {
-  :root {
-    --marquee-width: 100vw;
-    --marquee-height: fit-content;
-    --marquee-elements-displayed: 3;
-  }
 }
