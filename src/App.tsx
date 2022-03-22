@@ -1,20 +1,36 @@
 import "./App.css";
+import { data } from "./assets/data/faq-data-list";
+import { useState } from "react";
 
 const App = () => {
+  const [selected, setSelected] = useState<null | number>(null);
+
+  const toggle = (i: number) => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
+
   const handleClick = () => {
     const checkbox = document.getElementById("check") as HTMLInputElement;
     checkbox.checked = false;
   };
 
   return (
-    <>
+    <div className="main">
+      {/* navbar section */}
       <nav>
         <input type="checkbox" name="checkbox" id="check" />
         <label htmlFor="check">
           <i className="fas fa-bars" id="btn"></i>
           <i className="fas fa-times" id="cancel"></i>
         </label>
-        <img src="https://doodles.app/images/doodles_logo.png" alt="" />
+        <div className="logo">
+          <a href="/home">
+            <img src="https://doodles.app/images/doodles_logo.png" alt="" />
+          </a>
+        </div>
         <ul>
           <li>
             <a onClick={() => handleClick()} href="#">
@@ -27,7 +43,7 @@ const App = () => {
             </a>
           </li>
           <li className="menu-items">
-            <a onClick={() => handleClick()} href="#">
+            <a onClick={() => handleClick()} href="#question1">
               FAQs
             </a>
           </li>
@@ -37,6 +53,7 @@ const App = () => {
         </ul>
       </nav>
 
+      {/* content section */}
       <div className="marquee">
         <div className="marquee-content">
           <img
@@ -117,7 +134,30 @@ const App = () => {
           />
         </div>
       </div>
-    </>
+
+      {/* FAQs section */}
+      <h3 className="faq-title" id="question1">
+        FAQs
+      </h3>
+
+      <div className="wrapper">
+        <div className="accordion">
+          {data.map((item, idx) => (
+            <div className="item">
+              <div className="title" onClick={() => toggle(idx)}>
+                <h2>{item.question}</h2>
+                <span className="accordion-icon">
+                  {selected === idx ? "-" : "+"}
+                </span>
+              </div>
+              <div className={selected === idx ? "content show" : "content"}>
+                {item.answer}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
