@@ -136,27 +136,30 @@ const App = () => {
       </div>
 
       {/* FAQs section */}
-      <h3 className="faq-title" id="question1">
-        FAQs
-      </h3>
-
       <div className="wrapper">
-        <div className="accordion">
-          {data.map((item, idx) => (
-            <div className="item">
-              <div className="title" onClick={() => toggle(idx)}>
-                <h2>{item.question}</h2>
-                <span className="accordion-icon">
-                  {selected === idx ? "-" : "+"}
-                </span>
+        <div className="container">
+          <h3 className="faq-title" id="question1">
+            FAQs
+          </h3>
+          <div className="accordion">
+            {data.map((item, idx) => (
+              <div className="item">
+                <div className="title" onClick={() => toggle(idx)}>
+                  <h2>{item.question}</h2>
+                  <span className="accordion-icon">
+                    {selected === idx ? "-" : "+"}
+                  </span>
+                </div>
+                <div className={selected === idx ? "content show" : "content"}>
+                  {item.answer}
+                </div>
               </div>
-              <div className={selected === idx ? "content show" : "content"}>
-                {item.answer}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* metaverse mall */}
     </div>
   );
 };
