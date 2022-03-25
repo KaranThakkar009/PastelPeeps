@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+
 :root {
   --marquee-width: 100vw;
   --marquee-height: fit-content;
@@ -7,11 +9,39 @@
     var(--marquee-width) / var(--marquee-elements-displayed)
   );
   --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+  --linear-gradient: linear-gradient(
+    360deg,
+    #bbbcf8 0%,
+    #75bce6 40%,
+    #4ebce7 80%,
+    #f2c9f5 100%
+  );
+}
+
+body {
+  font-family: "Caveat Brush", cursive, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(26, 27, 27, 0.637);
 }
 
 .main {
+  font-family: "Caveat Brush", cursive;
   height: 100%;
-  background-image: url("/public/landingpage.jpg");
+  background-image: linear-gradient(
+    360deg,
+    #bbbcf8 0%,
+    #75bce6 40%,
+    #4ebce7 80%,
+    #f2c9f5 100%
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -21,7 +51,10 @@
 /* nav bar styles */
 nav {
   height: 80px;
-  background: #23241ab6;
+  background: #e976ccb6;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav img {
@@ -88,6 +121,7 @@ label #cancel {
 }
 
 .connect-btn {
+  font-family: inherit;
   color: white;
   cursor: pointer;
   outline: none;
@@ -111,6 +145,7 @@ label #cancel {
   height: var(--marquee-height);
   overflow: hidden;
   background-color: inherit;
+  padding-top: 40px;
 }
 
 .marquee-content {
@@ -147,36 +182,33 @@ label #cancel {
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  color: #c09a90;
+  color: #b3dab8;
 }
 
 .wrapper {
   padding-top: 60px;
   width: 100%;
-  /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    flex-direction: column; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-direction: column;
 }
 
 .container {
-  background-color: #000000af;
+  background-color: #00000017;
   border-radius: 10px;
 }
 
 .accordion {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 33.33% 33.33% 31.5%;
   padding: 10px 20px;
   width: auto;
-  /* max-width: 700px; */
+  max-width: 700px;
 }
 
 .item {
   border-radius: 5px;
-  background-color: #23241a;
+  background-color: #b3dab8;
   margin-bottom: 5px;
   padding: 10px 20px;
 }
@@ -186,7 +218,7 @@ label #cancel {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(43, 40, 40, 0.6);
 }
 
 .content {
@@ -210,13 +242,13 @@ label #cancel {
   font-size: 30px;
 }
 
+/* metaverse mall style */
+
+/* metaverse mall style ends */
+
 @media (max-width: 1118px) {
   nav img {
     left: 8%;
-  }
-
-  .accordion {
-    grid-template-columns: 50% 49%;
   }
 }
 
@@ -240,7 +272,7 @@ label #cancel {
   ul {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #34495e;
     top: 80px;
     left: -100%;
@@ -279,8 +311,7 @@ label #cancel {
   .wrapper {
     font-size: 10px;
   }
+}
 
-  .accordion {
-    grid-template-columns: 100%;
-  }
+@media (min-width: 670px) {
 }

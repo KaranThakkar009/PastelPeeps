@@ -135,12 +135,12 @@ const App = () => {
         </div>
       </div>
 
+      {/* metaverse mall */}
+
       {/* FAQs section */}
-      <div className="wrapper">
+      <div className="wrapper" id="question1">
         <div className="container">
-          <h3 className="faq-title" id="question1">
-            FAQs
-          </h3>
+          <h3 className="faq-title">FAQs</h3>
           <div className="accordion">
             {data.map((item, idx) => (
               <div className="item">
@@ -158,8 +158,6 @@ const App = () => {
           </div>
         </div>
       </div>
-
-      {/* metaverse mall */}
     </div>
   );
 };
