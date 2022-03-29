@@ -55,84 +55,477 @@ const App = () => {
 
       {/* content section */}
       <div className="marquee">
+        {/* <div className="marquee-content">
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="inner-content">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+        </div> */}
         <div className="marquee-content">
-          <img
-            src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-            alt=""
-          />
-          <img
-            src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
-            alt=""
-          />
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
         </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div>
+
+        {/* <div className="marquee-content">
+          <div className="inner-content-img">
+            <img
+              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
+              alt=""
+            />
+          </div>
+          <div className="inner-content-text">
+            <span>alien frame</span>
+            <span>#32423</span>
+          </div>
+          <div className="inner-content-rating">
+            <div className="rating">2.3</div>
+            <div className="likes">15</div>
+          </div>
+        </div> */}
       </div>
 
       {/* metaverse mall */}
