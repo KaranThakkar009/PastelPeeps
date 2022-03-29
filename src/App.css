@@ -156,13 +156,14 @@ label #cancel {
 }
 
 .marquee-content {
+  height: 300px;
   flex: 0 0 auto;
   background-color: #34495e;
   margin: 0 5px;
   border-radius: 10px;
   padding: 0 5px;
-  width: 20vw;
-  animation: scrollX 15s linear infinite;
+  width: 200px;
+  animation: scrollX 10s linear infinite;
 }
 
 .inner-content-img {
@@ -174,7 +175,7 @@ label #cancel {
 
 .inner-content-img img {
   width: inherit;
-  height: inherit;
+  height: 200px;
   border-radius: inherit;
 }
 
@@ -195,9 +196,7 @@ label #cancel {
   }
   100% {
     /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
-    transform: translateX(
-      calc(-1 * (var(--marquee-element-width) * var(--marquee-elements)))
-    );
+    transform: translateX(calc(-1 * 7 * 180px));
   }
 }
 /* 
