@@ -157,11 +157,11 @@ label #cancel {
 
 .marquee-content {
   flex: 0 0 auto;
-  background-color: #34495e;
+  background-color: #0000002d;
   margin: 0 5px;
   border-radius: 10px;
   padding: 0 5px;
-  width: 20vw;
+  width: 200px;
   animation: scrollX 15s linear infinite;
 }
 
