@@ -52,7 +52,6 @@ const App = () => {
           </li>
         </ul>
       </nav>
-
       {/* content section */}
       <div className="marquee">
         <div className="marquee-content">
@@ -378,8 +377,34 @@ const App = () => {
           </div>
         </div>
       </div>
-
-      {/* metaverse mall */}
+      {/* Prelude */}
+      <div className="prelude">
+        <div className="prelude-title">Prelude</div>
+        <div className="staking">
+          <div className="staking-title">Staking</div>
+          <div className="staking-content">
+            <q>
+              The History we wrote, filled with colours and joy has been stolen,
+              it is up to the peeps to reclaim it
+            </q>
+            -Master Peep In a world where colour once filled every nook and
+            cranny, and the peeps lived happily A group of nefarious peeps have
+            devised a way to steal the colours of the peeps. This not only made
+            them dismal and bleaker, but made the nefarious peeps stronger. This
+            was when the resistance was formed: To fight against the tyranny of
+            the nefarious peeps and to reclaim the colours they had once lost.
+            As time passed the resistance of 50 had grown into the thousands.
+            The peeps were now fed up of their colours being stolen. Soon word
+            spread to the nefarious ones, “Nonsense! The peeps will never come
+            back for their colors. We have made them too weak to do so!” A
+            nefarious peep said with a smirk. However, in due time, the peeps
+            will prove otherwise and fight towards bringing back their colour
+            and bringing back the original sense of community that was once
+            loved by all. PastelPeeps is the resistance
+          </div>
+        </div>
+      </div>
+      {/* Prelude ends */}
 
       {/* FAQs section */}
       <div className="wrapper" id="question1">
@@ -402,6 +427,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      {/* FAQs ends */}
     </div>
   );
 };

@@ -147,7 +147,7 @@ label #cancel {
   height: var(--marquee-height);
   overflow: hidden;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   background-color: inherit;
   padding-top: 40px;
@@ -217,6 +217,22 @@ label #cancel {
   border: 3px solid transparent;
   border-radius: 10px;
 } */
+
+/* Prelude styles */
+
+.prelude {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.prelude-title {
+  font-size: 4rem;
+}
+
+/* Prelude styles ends */
 
 /* faq styles */
 
