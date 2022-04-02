@@ -1,6 +1,8 @@
 import "./App.css";
 import { data } from "./assets/data/faq-data-list";
 import { useState } from "react";
+import { FaEthereum } from "react-icons/fa";
+import { BiHeart } from "react-icons/bi";
 
 const App = () => {
   const [selected, setSelected] = useState<null | number>(null);
@@ -66,8 +68,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -83,8 +91,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -100,8 +114,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -117,8 +137,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -134,8 +160,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -151,8 +183,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -168,8 +206,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -185,8 +229,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -202,8 +252,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -219,8 +275,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -236,8 +298,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -253,8 +321,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -270,8 +344,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -287,8 +367,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -304,8 +390,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -321,8 +413,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -338,8 +436,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -355,8 +459,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
 
@@ -372,8 +482,14 @@ const App = () => {
             <span>#32423</span>
           </div>
           <div className="inner-content-rating">
-            <div className="rating">2.3</div>
-            <div className="likes">15</div>
+            <div className="rating">
+              <FaEthereum />
+              2.3
+            </div>
+            <div className="likes">
+              <BiHeart />
+              15
+            </div>
           </div>
         </div>
       </div>
@@ -383,24 +499,32 @@ const App = () => {
         <div className="staking">
           <div className="staking-title">Staking</div>
           <div className="staking-content">
-            <q>
+            <q style={{ color: "#a6e3e1" }}>
               The History we wrote, filled with colours and joy has been stolen,
               it is up to the peeps to reclaim it
             </q>
-            -Master Peep In a world where colour once filled every nook and
-            cranny, and the peeps lived happily A group of nefarious peeps have
-            devised a way to steal the colours of the peeps. This not only made
-            them dismal and bleaker, but made the nefarious peeps stronger. This
-            was when the resistance was formed: To fight against the tyranny of
-            the nefarious peeps and to reclaim the colours they had once lost.
-            As time passed the resistance of 50 had grown into the thousands.
-            The peeps were now fed up of their colours being stolen. Soon word
-            spread to the nefarious ones, “Nonsense! The peeps will never come
-            back for their colors. We have made them too weak to do so!” A
-            nefarious peep said with a smirk. However, in due time, the peeps
-            will prove otherwise and fight towards bringing back their colour
-            and bringing back the original sense of community that was once
-            loved by all. PastelPeeps is the resistance
+            -Master Peep
+            <p style={{ color: "#7d93e8" }}>
+              In a world where colour once filled every nook and cranny, and the
+              peeps lived happily A group of nefarious peeps have devised a way
+              to steal the colours of the peeps. This not only made them dismal
+              and bleaker, but made the nefarious peeps stronger. This was when
+              the resistance was formed: To fight against the tyranny of the
+              nefarious peeps and to reclaim the colours they had once lost. As
+              time passed the resistance of 50 had grown into the thousands. The
+              peeps were now fed up of their colours being stolen.
+            </p>
+            <p style={{ color: "#cfdb8a" }}>
+              Soon word spread to the nefarious ones, “Nonsense! The peeps will
+              never come back for their colors. We have made them too weak to do
+              so!” A nefarious peep said with a smirk.
+            </p>
+            <p style={{ color: "#db8ab8" }}>
+              However, in due time, the peeps will prove otherwise and fight
+              towards bringing back their colour and bringing back the original
+              sense of community that was once loved by all.
+            </p>
+            <p style={{ color: "#de8c8c" }}>PastelPeeps is the resistance</p>
           </div>
         </div>
       </div>
