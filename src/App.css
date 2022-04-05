@@ -58,7 +58,7 @@ nav {
   border-bottom: 10px solid #e061c0b6;
 }
 
-nav img {
+.logo-img {
   width: 150px;
   position: absolute;
   top: 17px;
@@ -107,6 +107,14 @@ nav ul li a:hover::before {
   cursor: pointer;
 }
 
+.discord-logo,
+.twitter-logo {
+  width: 60px;
+  position: absolute;
+  bottom: -17px;
+  right: -28px;
+}
+
 label #btn,
 label #cancel {
   color: white;
@@ -123,6 +131,7 @@ label #cancel {
 }
 
 .connect-btn {
+  margin-top: inherit;
   font-family: inherit;
   color: white;
   cursor: pointer;
@@ -163,7 +172,7 @@ label #cancel {
   border-radius: 10px;
   padding: 0 5px;
   width: 200px;
-  /* animation: scrollX 10s linear infinite; */
+  animation: scrollX 10s linear infinite;
 }
 
 .inner-content-img {
@@ -329,13 +338,13 @@ label #cancel {
 /* metaverse mall style ends */
 
 @media (max-width: 1118px) {
-  nav img {
+  .logo-img {
     left: 8%;
   }
 }
 
 @media (max-width: 944px) {
-  nav img {
+  .logo-img {
     left: 6%;
     top: 20px;
     width: 130px;
@@ -353,6 +362,20 @@ label #cancel {
 @media (max-width: 860px) {
   label #btn {
     display: block;
+  }
+
+  .discord-logo {
+    width: 85px;
+    position: absolute;
+    bottom: -28px;
+    right: 0px;
+  }
+
+  .twitter-logo {
+    width: 85px;
+    position: absolute;
+    bottom: -28px;
+    right: -86px;
   }
 
   ul {

@@ -1,5 +1,8 @@
 import "./App.css";
 import { data } from "./assets/data/faq-data-list";
+import logo from "./assets/TWT_HEADER_9.jpg";
+import twitterLogo from "./assets/TWT .png";
+import discordLogo from "./assets/DISCORD.png";
 import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
@@ -30,7 +33,7 @@ const App = () => {
         </label>
         <div className="logo">
           <a href="/home">
-            <img src="https://doodles.app/images/doodles_logo.png" alt="" />
+            <img className="logo-img" src={logo} alt="logo" />
           </a>
         </div>
         <ul>
@@ -47,6 +50,24 @@ const App = () => {
           <li className="menu-items">
             <a onClick={() => handleClick()} href="#question1">
               FAQs
+            </a>
+          </li>
+          <li className="menu-items ">
+            <a onClick={() => handleClick()} href="#">
+              <img
+                className="discord-logo"
+                src={discordLogo}
+                alt="Discord Logo"
+              />
+            </a>
+          </li>
+          <li className="menu-items">
+            <a onClick={() => handleClick()} href="#question1">
+              <img
+                className="twitter-logo"
+                src={twitterLogo}
+                alt="Twitter Logo"
+              />
             </a>
           </li>
           <li>
