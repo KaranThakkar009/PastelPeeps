@@ -32,6 +32,22 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(26, 27, 27, 0.637);
 }
 
+@font-face {
+  font-family: "AloneOnEarth";
+  src: local("AloneOnEarth"),
+    url(./assets/fonts/Alone\ On\ Earth.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: "JUSTICE FEST";
+  src: local("JUSTICE FEST"),
+    url(./assets/fonts/JUSTICE\ FEST.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .main {
   font-family: "Caveat Brush", cursive;
   height: 100%;
@@ -51,11 +67,15 @@ body::-webkit-scrollbar-thumb {
 /* nav bar styles */
 nav {
   height: 80px;
-  background: #e989d1b6;
+  background-image: url("./assets/BANNER.png");
+  background-position: center;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 10px solid #e061c0b6;
+  /* border-bottom: 10px solid #e061c0b6; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .logo-img {
@@ -68,13 +88,14 @@ nav {
 nav ul {
   z-index: 99;
   float: right;
-  margin-right: 25px;
+  margin-right: 64px;
 }
 
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 15px;
+  font-family: AloneOnEarth;
 }
 
 nav ul li a {
@@ -107,12 +128,16 @@ nav ul li a:hover::before {
   cursor: pointer;
 }
 
+.discord {
+  margin-right: 10px;
+}
+
 .discord-logo,
 .twitter-logo {
-  width: 60px;
+  width: 35px;
   position: absolute;
-  bottom: -17px;
-  right: -28px;
+  bottom: -11px;
+  right: -23px;
 }
 
 label #btn,
@@ -172,7 +197,7 @@ label #cancel {
   border-radius: 10px;
   padding: 0 5px;
   width: 200px;
-  animation: scrollX 10s linear infinite;
+  animation: scrollX 25s linear infinite;
 }
 
 .inner-content-img {
@@ -205,7 +230,7 @@ label #cancel {
   }
   100% {
     /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
-    transform: translateX(calc(-1 * 7 * 180px));
+    transform: translateX(calc(-1 * 22 * 200px));
   }
 }
 /* 
@@ -246,6 +271,14 @@ label #cancel {
 
 .prelude-title {
   font-size: 4rem;
+  font-family: JUSTICE FEST;
+}
+
+.prelude-img {
+  width: 100%;
+  max-width: 700px;
+  min-width: 330px;
+  border-radius: 10px;
 }
 
 .staking {
@@ -259,9 +292,37 @@ label #cancel {
 
 .staking-content {
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Prelude styles ends */
+
+/* Roadmap style */
+
+.read-more {
+  height: 100px;
+  width: 150px;
+  background-image: url("./assets/button1.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  align-self: center;
+  font-family: AloneOnEarth;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all;
+}
+
+.read-more:hover {
+  transform: scale(1.2);
+}
+
+.modal-text {
+  font-family: AloneOnEarth;
+}
 
 /* faq styles */
 
@@ -364,10 +425,14 @@ label #cancel {
     display: block;
   }
 
+  .social-media-icons {
+    padding-top: 20px;
+  }
+
   .discord-logo {
     width: 85px;
     position: absolute;
-    bottom: -28px;
+    bottom: -48px;
     right: 0px;
   }
 
@@ -424,7 +489,4 @@ label #cancel {
   .wrapper {
     font-size: 10px;
   }
-}
-
-@media (min-width: 670px) {
 }

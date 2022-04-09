@@ -1,13 +1,35 @@
 import "./App.css";
 import { data } from "./assets/data/faq-data-list";
 import logo from "./assets/TWT_HEADER_9.jpg";
-import twitterLogo from "./assets/TWT .png";
+import twitterLogo from "./assets/TWT.png";
 import discordLogo from "./assets/DISCORD.png";
+import { imagesDetails } from "./assets/scroll-animations/imagesDetails";
+import { roadmapList } from "./assets/data/roadmap-list";
 import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
+import React from "react";
+import { Modal, Box, Typography } from "@mui/material";
+
+const style = {
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+  width: "500px",
+  maxWidth: "100%",
+  height: "300px",
+  overflowY: "scroll",
+};
 
 const App = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const [selected, setSelected] = useState<null | number>(null);
 
   const toggle = (i: number) => {
@@ -38,30 +60,30 @@ const App = () => {
         </div>
         <ul>
           <li>
-            <a onClick={() => handleClick()} href="#">
+            <a onClick={() => handleClick()} href="#prelude">
               Prelude
             </a>
           </li>
           <li>
-            <a onClick={() => handleClick()} href="#">
-              Metaverse Mall
+            <a onClick={() => handleClick()} href="#roadmap">
+              Roadmap
             </a>
           </li>
           <li className="menu-items">
-            <a onClick={() => handleClick()} href="#question1">
+            <a onClick={() => handleClick()} href="#faq">
               FAQs
             </a>
           </li>
-          <li className="menu-items ">
+          <li className="menu-items">
             <a onClick={() => handleClick()} href="#">
               <img
-                className="discord-logo"
+                className="discord discord-logo"
                 src={discordLogo}
                 alt="Discord Logo"
               />
             </a>
           </li>
-          <li className="menu-items">
+          <li className="menu-items social-media-icons">
             <a onClick={() => handleClick()} href="#question1">
               <img
                 className="twitter-logo"
@@ -70,489 +92,82 @@ const App = () => {
               />
             </a>
           </li>
-          <li>
+          {/* <li>
             <button className="connect-btn">Mint</button>
-          </li>
+          </li> */}
         </ul>
       </nav>
       {/* content section */}
       <div className="marquee">
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
+        {imagesDetails.map((item, idx) => (
+          <div className="marquee-content">
+            <div className="inner-content-img">
+              <img src={item.imageSrc} alt="" />
             </div>
-            <div className="likes">
-              <BiHeart />
-              15
+            <div className="inner-content-text">
+              <span>{item.name}</span>
+              <span>#{item.price}</span>
             </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
+            <div className="inner-content-rating">
+              <div className="rating">
+                <FaEthereum />
+                {item.price}
+              </div>
+              <div className="likes">
+                <BiHeart />
+                {item.likes}
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character4.d8a559ffdc66efd715a4.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character8.046243586899b36b2090.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character1.e0a210e92ec4cbed8a2a.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character2.403babe869f3adee74b5.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
-
-        <div className="marquee-content">
-          <div className="inner-content-img">
-            <img
-              src="https://nft.tinyfac.es/static/media/character3.5902788d18338970e54c.jpg"
-              alt=""
-            />
-          </div>
-          <div className="inner-content-text">
-            <span>alien frame</span>
-            <span>#32423</span>
-          </div>
-          <div className="inner-content-rating">
-            <div className="rating">
-              <FaEthereum />
-              2.3
-            </div>
-            <div className="likes">
-              <BiHeart />
-              15
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
       {/* Prelude */}
-      <div className="prelude">
+      <div className="prelude" id="prelude">
         <div className="prelude-title">Prelude</div>
         <div className="staking">
-          <div className="staking-title">Staking</div>
+          {/* <div className="staking-title">Staking</div> */}
           <div className="staking-content">
-            <q style={{ color: "#a6e3e1" }}>
-              The History we wrote, filled with colours and joy has been stolen,
-              it is up to the peeps to reclaim it
-            </q>
-            -Master Peep
-            <p style={{ color: "#7d93e8" }}>
-              In a world where colour once filled every nook and cranny, and the
-              peeps lived happily A group of nefarious peeps have devised a way
-              to steal the colours of the peeps. This not only made them dismal
-              and bleaker, but made the nefarious peeps stronger. This was when
-              the resistance was formed: To fight against the tyranny of the
-              nefarious peeps and to reclaim the colours they had once lost. As
-              time passed the resistance of 50 had grown into the thousands. The
-              peeps were now fed up of their colours being stolen.
-            </p>
-            <p style={{ color: "#cfdb8a" }}>
-              Soon word spread to the nefarious ones, “Nonsense! The peeps will
-              never come back for their colors. We have made them too weak to do
-              so!” A nefarious peep said with a smirk.
-            </p>
-            <p style={{ color: "#db8ab8" }}>
-              However, in due time, the peeps will prove otherwise and fight
-              towards bringing back their colour and bringing back the original
-              sense of community that was once loved by all.
-            </p>
-            <p style={{ color: "#de8c8c" }}>PastelPeeps is the resistance</p>
+            <img className="prelude-img" src="prelude.png" alt="" />
           </div>
         </div>
       </div>
       {/* Prelude ends */}
 
+      {/* Roadmap */}
+      <div className="prelude" id="roadmap">
+        <div className="prelude-title">Roadmap</div>
+        <div className="staking">
+          {/* <div className="staking-title">Staking</div> */}
+          <div className="staking-content">
+            <img className="prelude-img" src="roadmap.jpg" alt="" />
+            <button className="read-more" onClick={handleOpen}>
+              Read more...
+            </button>
+          </div>
+        </div>
+      </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className="modal-text">
+          {roadmapList.map((item, idx) => {
+            return (
+              <div key={idx}>
+                <div style={{ fontWeight: "600" }}>{item.title}</div>
+                <div>{item.description}</div>
+                <br />
+              </div>
+            );
+          })}
+        </Box>
+      </Modal>
+      {/* Roadmap ends */}
+
       {/* FAQs section */}
-      <div className="wrapper" id="question1">
+      <div className="wrapper" id="faq">
         <div className="container">
           <h3 className="faq-title">FAQs</h3>
           <div className="accordion">
