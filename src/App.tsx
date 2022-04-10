@@ -1,6 +1,7 @@
 import "./App.css";
 import { data } from "./assets/data/faq-data-list";
-import logo from "./assets/TWT_HEADER_9.jpg";
+// import logo from "./assets/TWT_HEADER_9.jpg";
+import logo from "./assets/LOGO.png";
 import twitterLogo from "./assets/TWT.png";
 import discordLogo from "./assets/DISCORD.png";
 import { imagesDetails } from "./assets/scroll-animations/imagesDetails";
@@ -122,7 +123,7 @@ const App = () => {
         ))}
       </div>
       {/* Prelude */}
-      <div className="prelude" id="prelude">
+      <section className="prelude" id="prelude">
         <div className="prelude-title">Prelude</div>
         <div className="staking">
           {/* <div className="staking-title">Staking</div> */}
@@ -130,7 +131,7 @@ const App = () => {
             <img className="prelude-img" src="prelude.png" alt="" />
           </div>
         </div>
-      </div>
+      </section>
       {/* Prelude ends */}
 
       {/* Roadmap */}

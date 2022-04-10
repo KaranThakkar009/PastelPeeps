@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb {
 /* nav bar styles */
 nav {
   height: 80px;
-  background-image: url("./assets/BANNER.png");
+  background-image: url("./assets/BANNER2.png");
   background-position: center;
   position: sticky;
   top: 0;
@@ -81,14 +81,14 @@ nav {
 .logo-img {
   width: 150px;
   position: absolute;
-  top: 17px;
-  left: 12%;
+  top: -3px;
+  left: 2%;
 }
 
 nav ul {
   z-index: 99;
   float: right;
-  margin-right: 64px;
+  margin-right: 103px;
 }
 
 nav ul li {
@@ -137,7 +137,7 @@ nav ul li a:hover::before {
   width: 35px;
   position: absolute;
   bottom: -11px;
-  right: -23px;
+  right: -34px;
 }
 
 label #btn,
@@ -400,14 +400,14 @@ label #cancel {
 
 @media (max-width: 1118px) {
   .logo-img {
-    left: 8%;
+    left: 1%;
   }
 }
 
 @media (max-width: 944px) {
   .logo-img {
-    left: 6%;
-    top: 20px;
+    left: 1%;
+    top: 4px;
     width: 130px;
   }
 
