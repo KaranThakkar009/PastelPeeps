@@ -266,7 +266,7 @@ label #cancel {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .prelude-title {
