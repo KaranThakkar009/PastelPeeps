@@ -4,7 +4,11 @@ import { data } from "./assets/data/faq-data-list";
 import logo from "./assets/LOGO.png";
 import twitterLogo from "./assets/TWT.png";
 import discordLogo from "./assets/DISCORD.png";
-import { imagesDetails } from "./assets/scroll-animations/imagesDetails";
+import notionLogo from "./assets/notion2.png";
+import {
+  imagesDetails,
+  imagesDetails2,
+} from "./assets/scroll-animations/imagesDetails";
 import { roadmapList } from "./assets/data/roadmap-list";
 import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
@@ -76,7 +80,11 @@ const App = () => {
             </a>
           </li>
           <li className="menu-items">
-            <a onClick={() => handleClick()} href="#">
+            <a
+              onClick={() => handleClick()}
+              href="http://discord.gg/PastelPeeps"
+              target="_blank"
+            >
               <img
                 className="discord discord-logo"
                 src={discordLogo}
@@ -85,11 +93,28 @@ const App = () => {
             </a>
           </li>
           <li className="menu-items social-media-icons">
-            <a onClick={() => handleClick()} href="#question1">
+            <a
+              onClick={() => handleClick()}
+              href="https://pastelpeeps.notion.site/pastelpeeps/PastelPeepsNFT-f9293f8efcc24d6ea863c2f8ee10c5d3"
+              target="_blank"
+            >
               <img
                 className="twitter-logo"
                 src={twitterLogo}
                 alt="Twitter Logo"
+              />
+            </a>
+          </li>
+          <li className="menu-items social-media-icons">
+            <a
+              onClick={() => handleClick()}
+              href="https://twitter.com/PastelPeepsNFT"
+              target="_blank"
+            >
+              <img
+                className="notion notion-logo"
+                src={notionLogo}
+                alt="Notion Logo"
               />
             </a>
           </li>
@@ -102,6 +127,29 @@ const App = () => {
       <div className="marquee">
         {imagesDetails.map((item, idx) => (
           <div className="marquee-content">
+            <div className="inner-content-img">
+              <img src={item.imageSrc} alt="" />
+            </div>
+            <div className="inner-content-text">
+              <span>{item.name}</span>
+              <span>#{item.price}</span>
+            </div>
+            <div className="inner-content-rating">
+              <div className="rating">
+                <FaEthereum />
+                {item.price}
+              </div>
+              <div className="likes">
+                <BiHeart />
+                {item.likes}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="marquee">
+        {imagesDetails2.map((item, idx) => (
+          <div className="marquee-content2">
             <div className="inner-content-img">
               <img src={item.imageSrc} alt="" />
             </div>
@@ -146,25 +194,26 @@ const App = () => {
             </button>
           </div>
         </div>
+
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style} className="modal-text">
+            {roadmapList.map((item, idx) => {
+              return (
+                <div key={idx}>
+                  <div style={{ fontWeight: "600" }}>{item.title}</div>
+                  <div>{item.description}</div>
+                  <br />
+                </div>
+              );
+            })}
+          </Box>
+        </Modal>
       </div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style} className="modal-text">
-          {roadmapList.map((item, idx) => {
-            return (
-              <div key={idx}>
-                <div style={{ fontWeight: "600" }}>{item.title}</div>
-                <div>{item.description}</div>
-                <br />
-              </div>
-            );
-          })}
-        </Box>
-      </Modal>
       {/* Roadmap ends */}
 
       {/* FAQs section */}

@@ -101,8 +101,10 @@ nav ul li {
 nav ul li a {
   position: relative;
   color: white;
-  font-size: 18px;
+  /* font-size: 18px; */
   text-transform: uppercase;
+  font-weight: bold;
+  font-size: xx-large;
 }
 
 nav ul li a::before {
@@ -132,11 +134,16 @@ nav ul li a:hover::before {
   margin-right: 10px;
 }
 
+.notion {
+  margin-right: -11px;
+}
+
 .discord-logo,
-.twitter-logo {
+.twitter-logo,
+.notion-logo {
   width: 35px;
   position: absolute;
-  bottom: -11px;
+  bottom: -6px;
   right: -34px;
 }
 
@@ -197,7 +204,18 @@ label #cancel {
   border-radius: 10px;
   padding: 0 5px;
   width: 200px;
-  animation: scrollX 25s linear infinite;
+  animation: scrollX 60s linear infinite;
+}
+
+.marquee-content2 {
+  height: 300px;
+  flex: 0 0 auto;
+  background-color: #0000002d;
+  margin: 0 5px;
+  border-radius: 10px;
+  padding: 0 5px;
+  width: 200px;
+  animation: scrollX2 60s linear infinite;
 }
 
 .inner-content-img {
@@ -230,7 +248,17 @@ label #cancel {
   }
   100% {
     /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
-    transform: translateX(calc(-1 * 22 * 200px));
+    transform: translateX(calc(-1 * 11 * 200px));
+  }
+}
+
+@keyframes scrollX2 {
+  0% {
+    transform: translateX(calc(-1 * 11 * 200px));
+  }
+  100% {
+    /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
+    transform: translateX(0);
   }
 }
 /* 
@@ -336,6 +364,7 @@ label #cancel {
 }
 
 .wrapper {
+  font-family: AloneOnEarth;
   padding-top: 60px;
   width: 100%;
   display: flex;
@@ -412,7 +441,7 @@ label #cancel {
   }
 
   nav ul li a {
-    font-size: 17px;
+    font-size: x-large;
   }
 
   .staking {
@@ -430,17 +459,24 @@ label #cancel {
   }
 
   .discord-logo {
-    width: 85px;
+    width: 64px;
     position: absolute;
     bottom: -48px;
-    right: 0px;
+    right: 37px;
   }
 
   .twitter-logo {
-    width: 85px;
+    width: 64px;
     position: absolute;
     bottom: -28px;
-    right: -86px;
+    right: -120px;
+  }
+
+  .notion-logo {
+    width: 64px;
+    position: absolute;
+    bottom: 43px;
+    right: -25px;
   }
 
   ul {
@@ -461,7 +497,7 @@ label #cancel {
   }
 
   nav ul li a {
-    font-size: 20px;
+    font-size: xx-large;
   }
 
   #check:checked ~ ul {
