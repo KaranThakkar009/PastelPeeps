@@ -64,17 +64,17 @@ const App = () => {
           </a>
         </div>
         <ul>
-          <li>
+          <li className="align-center-prelude">
             <a onClick={() => handleClick()} href="#prelude">
               Prelude
             </a>
           </li>
-          <li>
+          <li className="align-center-roadmap">
             <a onClick={() => handleClick()} href="#roadmap">
               Roadmap
             </a>
           </li>
-          <li className="menu-items">
+          <li className="menu-items align-center-faq">
             <a onClick={() => handleClick()} href="#faq">
               FAQs
             </a>
@@ -134,7 +134,7 @@ const App = () => {
               <span>{item.name}</span>
               <span>#{item.price}</span>
             </div>
-            <div className="inner-content-rating">
+            {/* <div className="inner-content-rating">
               <div className="rating">
                 <FaEthereum />
                 {item.price}
@@ -143,10 +143,11 @@ const App = () => {
                 <BiHeart />
                 {item.likes}
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
+
       <div className="marquee">
         {imagesDetails2.map((item, idx) => (
           <div className="marquee-content2">
@@ -157,7 +158,7 @@ const App = () => {
               <span>{item.name}</span>
               <span>#{item.price}</span>
             </div>
-            <div className="inner-content-rating">
+            {/* <div className="inner-content-rating">
               <div className="rating">
                 <FaEthereum />
                 {item.price}
@@ -166,7 +167,7 @@ const App = () => {
                 <BiHeart />
                 {item.likes}
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

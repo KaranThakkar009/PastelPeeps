@@ -85,6 +85,21 @@ nav {
   left: 2%;
 }
 
+.align-center-prelude {
+  position: absolute;
+  right: 900px;
+}
+
+.align-center-roadmap {
+  position: absolute;
+  right: 758px;
+}
+
+.align-center-faq {
+  position: absolute;
+  right: 659px;
+}
+
 nav ul {
   z-index: 99;
   float: right;
@@ -143,7 +158,7 @@ nav ul li a:hover::before {
 .notion-logo {
   width: 35px;
   position: absolute;
-  bottom: -6px;
+  bottom: -39px;
   right: -34px;
 }
 
@@ -197,7 +212,7 @@ label #cancel {
 }
 
 .marquee-content {
-  height: 300px;
+  height: 273px;
   flex: 0 0 auto;
   background-color: #0000002d;
   margin: 0 5px;
@@ -208,7 +223,7 @@ label #cancel {
 }
 
 .marquee-content2 {
-  height: 300px;
+  height: 273px;
   flex: 0 0 auto;
   background-color: #0000002d;
   margin: 0 5px;
@@ -450,6 +465,12 @@ label #cancel {
 }
 
 @media (max-width: 860px) {
+  .align-center-prelude,
+  .align-center-roadmap,
+  .align-center-faq {
+    position: revert;
+  }
+
   label #btn {
     display: block;
   }
@@ -524,5 +545,75 @@ label #cancel {
 
   .wrapper {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .align-center-prelude {
+    right: 676px;
+  }
+
+  .align-center-roadmap {
+    right: 523px;
+  }
+
+  .align-center-faq {
+    right: 420px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .align-center-prelude {
+    right: 634px;
+  }
+
+  .align-center-roadmap {
+    right: 481px;
+  }
+
+  .align-center-faq {
+    right: 378px;
+  }
+}
+
+@media (max-width: 996px) {
+  .align-center-prelude {
+    right: 596px;
+  }
+
+  .align-center-roadmap {
+    right: 443px;
+  }
+
+  .align-center-faq {
+    right: 340px;
+  }
+}
+
+@media (max-width: 941px) {
+  .align-center-prelude {
+    right: 559px;
+  }
+
+  .align-center-roadmap {
+    right: 406px;
+  }
+
+  .align-center-faq {
+    right: 303px;
+  }
+}
+
+@media (max-width: 1510px) and (min-width: 1170px) {
+  .align-center-prelude {
+    right: 695px;
+  }
+
+  .align-center-roadmap {
+    right: 544px;
+  }
+
+  .align-center-faq {
+    right: 441px;
   }
 }
