@@ -4,7 +4,7 @@ import { data } from "./assets/data/faq-data-list";
 import logo from "./assets/LOGO.png";
 import twitterLogo from "./assets/TWT.png";
 import discordLogo from "./assets/DISCORD.png";
-import notionLogo from "./assets/notion2.png";
+import notionLogo from "./assets/notion6.png";
 import {
   imagesDetails,
   imagesDetails2,
@@ -59,7 +59,7 @@ const App = () => {
           <i className="fas fa-times" id="cancel"></i>
         </label>
         <div className="logo">
-          <a href="/home">
+          <a href="https://pastelpeeps.netlify.app/">
             <img className="logo-img" src={logo} alt="logo" />
           </a>
         </div>
@@ -95,7 +95,7 @@ const App = () => {
           <li className="menu-items social-media-icons">
             <a
               onClick={() => handleClick()}
-              href="https://pastelpeeps.notion.site/pastelpeeps/PastelPeepsNFT-f9293f8efcc24d6ea863c2f8ee10c5d3"
+              href="https://twitter.com/PastelPeepsNFT"
               target="_blank"
             >
               <img
@@ -108,7 +108,7 @@ const App = () => {
           <li className="menu-items social-media-icons">
             <a
               onClick={() => handleClick()}
-              href="https://twitter.com/PastelPeepsNFT"
+              href="https://pastelpeeps.notion.site/pastelpeeps/PastelPeepsNFT-f9293f8efcc24d6ea863c2f8ee10c5d3"
               target="_blank"
             >
               <img
