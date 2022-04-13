@@ -100,6 +100,11 @@ nav {
   right: 659px;
 }
 
+.align-center-team {
+  position: absolute;
+  right: 560px;
+}
+
 nav ul {
   z-index: 99;
   float: right;
@@ -560,6 +565,10 @@ label #cancel {
   .align-center-faq {
     right: 420px;
   }
+
+  .align-center-team {
+    right: 316px;
+  }
 }
 
 @media (max-width: 1070px) {
@@ -573,6 +582,10 @@ label #cancel {
 
   .align-center-faq {
     right: 378px;
+  }
+
+  .align-center-team {
+    right: 277px;
   }
 }
 
@@ -588,6 +601,10 @@ label #cancel {
   .align-center-faq {
     right: 340px;
   }
+
+  .align-center-team {
+    right: 244px;
+  }
 }
 
 @media (max-width: 941px) {
@@ -596,11 +613,15 @@ label #cancel {
   }
 
   .align-center-roadmap {
-    right: 406px;
+    right: 450px;
   }
 
   .align-center-faq {
-    right: 303px;
+    right: 382px;
+  }
+
+  .align-center-team {
+    right: 305px;
   }
 }
 
@@ -615,5 +636,9 @@ label #cancel {
 
   .align-center-faq {
     right: 441px;
+  }
+
+  .align-center-team {
+    right: 341px;
   }
 }

@@ -79,6 +79,12 @@ const App = () => {
               FAQs
             </a>
           </li>
+          <li className="menu-items align-center-team">
+            <a onClick={() => handleClick()} href="#team">
+              Team
+            </a>
+          </li>
+
           <li className="menu-items">
             <a
               onClick={() => handleClick()}
