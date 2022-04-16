@@ -1,10 +1,14 @@
 import "./App.css";
 import { data } from "./assets/data/faq-data-list";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 // import logo from "./assets/TWT_HEADER_9.jpg";
 import logo from "./assets/LOGO.png";
-import twitterLogo from "./assets/TWT.png";
-import discordLogo from "./assets/DISCORD.png";
-import notionLogo from "./assets/notion6.png";
+import twitterLogo from "./assets/twitter2.png";
+import discordLogo from "./assets/discord2.png";
+import notionLogo from "./assets/notion8.png";
 import {
   imagesDetails,
   imagesDetails2,
@@ -14,7 +18,7 @@ import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
 import React from "react";
-import { Modal, Box, Typography } from "@mui/material";
+import { Modal, Box, Typography, Button } from "@mui/material";
 
 const style = {
   position: "absolute" as "absolute",
@@ -54,7 +58,7 @@ const App = () => {
       {/* navbar section */}
       <nav>
         <input type="checkbox" name="checkbox" id="check" />
-        <label htmlFor="check">
+        <label className="checkbox-label" htmlFor="check">
           <i className="fas fa-bars" id="btn"></i>
           <i className="fas fa-times" id="cancel"></i>
         </label>
@@ -63,29 +67,30 @@ const App = () => {
             <img className="logo-img" src={logo} alt="logo" />
           </a>
         </div>
-        <ul>
-          <li className="align-center-prelude">
+        <ul className="links-ul">
+          <li className="">
             <a onClick={() => handleClick()} href="#prelude">
               Prelude
             </a>
           </li>
-          <li className="align-center-roadmap">
+          <li className="">
             <a onClick={() => handleClick()} href="#roadmap">
               Roadmap
             </a>
           </li>
-          <li className="menu-items align-center-faq">
+          <li className="">
             <a onClick={() => handleClick()} href="#faq">
               FAQs
             </a>
           </li>
-          <li className="menu-items align-center-team">
+          <li className="">
             <a onClick={() => handleClick()} href="#team">
               Team
             </a>
           </li>
-
-          <li className="menu-items">
+        </ul>
+        <ul className="social-media-ul">
+          <li className="">
             <a
               onClick={() => handleClick()}
               href="http://discord.gg/PastelPeeps"
@@ -124,13 +129,10 @@ const App = () => {
               />
             </a>
           </li>
-          {/* <li>
-            <button className="connect-btn">Mint</button>
-          </li> */}
         </ul>
       </nav>
       {/* content section */}
-      <div className="marquee">
+      {/* <div className="marquee">
         {imagesDetails.map((item, idx) => (
           <div className="marquee-content">
             <div className="inner-content-img">
@@ -140,7 +142,7 @@ const App = () => {
               <span>{item.name}</span>
               <span>#{item.price}</span>
             </div>
-            {/* <div className="inner-content-rating">
+            <div className="inner-content-rating">
               <div className="rating">
                 <FaEthereum />
                 {item.price}
@@ -149,11 +151,10 @@ const App = () => {
                 <BiHeart />
                 {item.likes}
               </div>
-            </div> */}
+            </div>
           </div>
         ))}
       </div>
-
       <div className="marquee">
         {imagesDetails2.map((item, idx) => (
           <div className="marquee-content2">
@@ -164,7 +165,7 @@ const App = () => {
               <span>{item.name}</span>
               <span>#{item.price}</span>
             </div>
-            {/* <div className="inner-content-rating">
+            <div className="inner-content-rating">
               <div className="rating">
                 <FaEthereum />
                 {item.price}
@@ -173,10 +174,10 @@ const App = () => {
                 <BiHeart />
                 {item.likes}
               </div>
-            </div> */}
+            </div>
           </div>
         ))}
-      </div>
+      </div> */}
       {/* Prelude */}
       <section className="prelude" id="prelude">
         <div className="prelude-title">Prelude</div>
@@ -188,7 +189,6 @@ const App = () => {
         </div>
       </section>
       {/* Prelude ends */}
-
       {/* Roadmap */}
       <div className="prelude" id="roadmap">
         <div className="prelude-title">Roadmap</div>
@@ -222,7 +222,6 @@ const App = () => {
         </Modal>
       </div>
       {/* Roadmap ends */}
-
       {/* FAQs section */}
       <div className="wrapper" id="faq">
         <div className="container">
@@ -245,6 +244,75 @@ const App = () => {
         </div>
       </div>
       {/* FAQs ends */}
+
+      {/* Team card */}
+      <div className="teams" id="team">
+        <div className="prelude-title">TEAM</div>
+        <div className="card">
+          <Card className="single-card" sx={{ maxWidth: 345 }}>
+            <CardMedia
+              component="img"
+              height="250"
+              image={imagesDetails[0].imageSrc}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Cryptozor
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Come for the art, stay for the community
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Discord</Button>
+              <Button size="small">Twitter</Button>
+            </CardActions>
+          </Card>
+
+          <Card className="single-card" sx={{ maxWidth: 345 }}>
+            <CardMedia
+              component="img"
+              height="250"
+              image={imagesDetails[1].imageSrc}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Cryptozor
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Come for the art, stay for the community
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Discord</Button>
+              <Button size="small">Twitter</Button>
+            </CardActions>
+          </Card>
+
+          <Card className="single-card" sx={{ maxWidth: 345 }}>
+            <CardMedia
+              component="img"
+              height="250"
+              image={imagesDetails[2].imageSrc}
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Cryptozor
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Come for the art, stay for the community
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Discord</Button>
+              <Button size="small">Twitter</Button>
+            </CardActions>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 };

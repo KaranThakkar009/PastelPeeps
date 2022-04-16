@@ -51,13 +51,33 @@ body::-webkit-scrollbar-thumb {
 .main {
   font-family: "Caveat Brush", cursive;
   height: 100%;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     360deg,
     #bbbcf8 0%,
     #75bce6 40%,
     #4ebce7 80%,
     #f2c9f5 100%
-  );
+  ); */
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  ); */
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -66,6 +86,8 @@ body::-webkit-scrollbar-thumb {
 
 /* nav bar styles */
 nav {
+  display: flex;
+  justify-content: space-between;
   height: 80px;
   background-image: url("./assets/BANNER3.png");
   background-position: center;
@@ -85,40 +107,33 @@ nav {
   left: 2%;
 }
 
-.align-center-prelude {
+.checkbox-label {
   position: absolute;
-  right: 900px;
+  right: 20px;
 }
 
-.align-center-roadmap {
-  position: absolute;
-  right: 758px;
-}
-
-.align-center-faq {
-  position: absolute;
-  right: 659px;
-}
-
-.align-center-team {
-  position: absolute;
-  right: 560px;
-}
-
-nav ul {
+nav .social-media-ul {
   z-index: 99;
-  float: right;
-  margin-right: 103px;
+  /* float: right; */
+  margin-right: 44px;
 }
 
-nav ul li {
+nav .links-ul {
+  z-index: 99;
+  /* float: right; */
+  margin-left: 110px;
+}
+
+nav .links-ul li,
+nav .social-media-ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 15px;
   font-family: AloneOnEarth;
 }
 
-nav ul li a {
+nav .links-ul li a,
+nav .social-media-ul li a {
   position: relative;
   color: white;
   /* font-size: 18px; */
@@ -127,7 +142,7 @@ nav ul li a {
   font-size: xx-large;
 }
 
-nav ul li a::before {
+nav .links-ul li a::before {
   margin-bottom: -5px;
   position: absolute;
   content: "";
@@ -141,7 +156,7 @@ nav ul li a::before {
   transition: transform 0.4s linear;
 }
 
-nav ul li a:hover::before {
+nav .links-ul li a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -150,21 +165,22 @@ nav ul li a:hover::before {
   cursor: pointer;
 }
 
-.discord {
+/* .discord {
   margin-right: 10px;
 }
 
 .notion {
   margin-right: -11px;
-}
+} */
 
 .discord-logo,
 .twitter-logo,
 .notion-logo {
   width: 35px;
-  position: absolute;
+  border-radius: 50%;
+  /* position: absolute;
   bottom: -39px;
-  right: -34px;
+  right: -34px; */
 }
 
 label #btn,
@@ -470,10 +486,12 @@ label #cancel {
 }
 
 @media (max-width: 860px) {
-  .align-center-prelude,
-  .align-center-roadmap,
-  .align-center-faq {
-    position: revert;
+  nav .links-ul {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1000;
   }
 
   label #btn {
@@ -486,26 +504,26 @@ label #cancel {
 
   .discord-logo {
     width: 64px;
-    position: absolute;
+    /* position: absolute;
     bottom: -48px;
-    right: 37px;
+    right: 37px; */
   }
 
   .twitter-logo {
     width: 64px;
-    position: absolute;
+    /* position: absolute;
     bottom: -28px;
-    right: -120px;
+    right: -120px; */
   }
 
   .notion-logo {
     width: 64px;
-    position: absolute;
+    /* position: absolute;
     bottom: 43px;
-    right: -25px;
+    right: -25px; */
   }
 
-  ul {
+  nav .links-ul {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -514,6 +532,24 @@ label #cancel {
     left: -100%;
     text-align: center;
     transition: all 0.5s;
+  }
+
+  nav .social-media-ul {
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+    /* background: #34495e; */
+    /* top: 80px; */
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 1000;
+    position: absolute;
+    top: 495%;
   }
 
   nav ul li {
@@ -641,4 +677,63 @@ label #cancel {
   .align-center-team {
     right: 341px;
   }
+}
+
+@media (max-width: 1170px) and (min-width: 1410px) {
+  .align-center-prelude {
+    right: 892px;
+  }
+
+  .align-center-roadmap {
+    right: 745px;
+  }
+
+  .align-center-faq {
+    right: 642px;
+  }
+
+  .align-center-team {
+    right: 540px;
+  }
+}
+
+@media (max-width: 3000px) and (min-width: 2000px) {
+  .align-center-prelude {
+    right: 1203px;
+  }
+
+  .align-center-roadmap {
+    right: 1052px;
+  }
+
+  .align-center-faq {
+    right: 946px;
+  }
+
+  .align-center-team {
+    right: 832px;
+  }
+}
+
+.teams {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.single-card {
+  margin: 10px;
+  background-color: #c0ebff !important;
 }
