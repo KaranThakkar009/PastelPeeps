@@ -132,17 +132,17 @@ const App = () => {
         </ul>
       </nav>
       {/* content section */}
-      {/* <div className="marquee">
+      <div className="marquee">
         {imagesDetails.map((item, idx) => (
           <div className="marquee-content">
             <div className="inner-content-img">
               <img src={item.imageSrc} alt="" />
             </div>
             <div className="inner-content-text">
-              <span>{item.name}</span>
-              <span>#{item.price}</span>
+              <span className="nft-name">{item.name}</span>
+              <span className="nft-price">#{item.price}</span>
             </div>
-            <div className="inner-content-rating">
+            {/* <div className="inner-content-rating">
               <div className="rating">
                 <FaEthereum />
                 {item.price}
@@ -151,7 +151,7 @@ const App = () => {
                 <BiHeart />
                 {item.likes}
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -162,10 +162,10 @@ const App = () => {
               <img src={item.imageSrc} alt="" />
             </div>
             <div className="inner-content-text">
-              <span>{item.name}</span>
-              <span>#{item.price}</span>
+              <span className="nft-name">{item.name}</span>
+              <span className="nft-price">#{item.price}</span>
             </div>
-            <div className="inner-content-rating">
+            {/* <div className="inner-content-rating">
               <div className="rating">
                 <FaEthereum />
                 {item.price}
@@ -174,17 +174,43 @@ const App = () => {
                 <BiHeart />
                 {item.likes}
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
-      </div> */}
+      </div>
       {/* Prelude */}
       <section className="prelude" id="prelude">
         <div className="prelude-title">Prelude</div>
         <div className="staking">
           {/* <div className="staking-title">Staking</div> */}
           <div className="staking-content">
-            <img className="prelude-img" src="prelude.png" alt="" />
+            <span style={{ color: "#a6e3e1" }}>
+              "The History we wrote, filled with colours and joy has been
+              stolen, it is up to the peeps to reclaim it"
+            </span>
+            -Master Peep
+            <p style={{ color: "#7d93e8" }}>
+              In a world where colour once filled every nook and cranny, and the
+              peeps lived happily A group of nefarious peeps have devised a way
+              to steal the colours of the peeps. This not only made them dismal
+              and bleaker, but made the nefarious peeps stronger. This was when
+              the resistance was formed: To fight against the tyranny of the
+              nefarious peeps and to reclaim the colours they had once lost. As
+              time passed the resistance of 50 had grown into the thousands. The
+              peeps were now fed up of their colours being stolen.
+            </p>
+            <p style={{ color: "#cfdb8a" }}>
+              Soon word spread to the nefarious ones, “Nonsense! The peeps will
+              never come back for their colors. We have made them too weak to do
+              so!” A nefarious peep said with a smirk.
+            </p>
+            <p style={{ color: "#db8ab8" }}>
+              However, in due time, the peeps will prove otherwise and fight
+              towards bringing back their colour and bringing back the original
+              sense of community that was once loved by all.
+            </p>
+            <p style={{ color: "#de8c8c" }}>PastelPeeps is the resistance</p>
+            {/* <img className="prelude-img" src="prelude.png" alt="" /> */}
           </div>
         </div>
       </section>
@@ -230,7 +256,7 @@ const App = () => {
             {data.map((item, idx) => (
               <div className="item">
                 <div className="title" onClick={() => toggle(idx)}>
-                  <h2>{item.question}</h2>
+                  <h2 className="title-h2">{item.question}</h2>
                   <span className="accordion-icon">
                     {selected === idx ? "-" : "+"}
                   </span>
@@ -257,10 +283,19 @@ const App = () => {
               alt="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography
+                className="card-text"
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
                 Cryptozor
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                className="card-text"
+                variant="body2"
+                color="text.secondary"
+              >
                 Come for the art, stay for the community
               </Typography>
             </CardContent>

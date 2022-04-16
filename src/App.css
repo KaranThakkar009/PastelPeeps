@@ -41,6 +41,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 @font-face {
+  font-family: "OrganicRelief";
+  src: local("OrganicRelief"),
+    url(./assets/fonts/OrganicRelief.ttf) format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
   font-family: "JUSTICE FEST";
   src: local("JUSTICE FEST"),
     url(./assets/fonts/JUSTICE\ FEST.otf) format("opentype");
@@ -49,7 +57,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main {
-  font-family: "Caveat Brush", cursive;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
   height: 100%;
   /* background-image: linear-gradient(
     360deg,
@@ -62,21 +70,13 @@ body::-webkit-scrollbar-thumb {
   background: -webkit-linear-gradient(
     to right,
     #004e92,
-    #000428
+    #030d6e
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
     #004e92,
-    #000428
+    #030d6e
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background-image: linear-gradient(
-    to right top,
-    #051937,
-    #004d7a,
-    #008793,
-    #00bf72,
-    #a8eb12
-  ); */
 
   background-repeat: no-repeat;
   background-position: center;
@@ -124,12 +124,18 @@ nav .links-ul {
   margin-left: 110px;
 }
 
-nav .links-ul li,
-nav .social-media-ul li {
+nav .links-ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 15px;
-  font-family: AloneOnEarth;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
+}
+
+nav .social-media-ul li {
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 15px;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
 }
 
 nav .links-ul li a,
@@ -139,7 +145,7 @@ nav .social-media-ul li a {
   /* font-size: 18px; */
   text-transform: uppercase;
   font-weight: bold;
-  font-size: xx-large;
+  font-size: larger;
 }
 
 nav .links-ul li a::before {
@@ -278,6 +284,17 @@ label #cancel {
   padding: 7px;
 }
 
+.nft-name {
+  color: white;
+  font-size: medium;
+  padding-bottom: 10px;
+}
+
+.nft-price {
+  color: white;
+  font-size: x-small;
+}
+
 @keyframes scrollX {
   0% {
     transform: translateX(0);
@@ -334,8 +351,9 @@ label #cancel {
 }
 
 .prelude-title {
+  padding-bottom: 2rem;
   font-size: 4rem;
-  font-family: JUSTICE FEST;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
 }
 
 .prelude-img {
@@ -355,6 +373,7 @@ label #cancel {
 }
 
 .staking-content {
+  line-height: 35px;
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -365,7 +384,9 @@ label #cancel {
 /* Roadmap style */
 
 .read-more {
-  height: 100px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  height: 75px;
   width: 150px;
   background-image: url("./assets/button1.png");
   background-position: center;
@@ -374,8 +395,7 @@ label #cancel {
   background-color: transparent;
   border: none;
   align-self: center;
-  font-family: AloneOnEarth;
-  font-size: 1.5rem;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
   cursor: pointer;
   transition: all;
 }
@@ -385,22 +405,23 @@ label #cancel {
 }
 
 .modal-text {
-  font-family: AloneOnEarth;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
 }
 
 /* faq styles */
 
 .faq-title {
+  margin: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 400;
   color: #e6ccfa;
 }
 
 .wrapper {
-  font-family: AloneOnEarth;
+  font-family: "OrganicRelief", "Caveat Brush", cursive;
   padding-top: 60px;
   width: 100%;
   display: flex;
@@ -438,6 +459,7 @@ label #cancel {
 }
 
 .content {
+  line-height: 45px;
   display: none;
   padding: 20px;
   border-radius: 5px;
@@ -457,6 +479,10 @@ label #cancel {
 
 .accordion-icon {
   font-size: 30px;
+}
+
+.title-h2 {
+  line-height: 50px;
 }
 
 /* metaverse mall style */
@@ -485,7 +511,7 @@ label #cancel {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 931px) {
   nav .links-ul {
     margin-left: 0;
     display: flex;
@@ -581,137 +607,11 @@ label #cancel {
 
 @media (max-width: 820px) {
   .faq-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .wrapper {
     font-size: 10px;
-  }
-}
-
-@media (max-width: 1170px) {
-  .align-center-prelude {
-    right: 676px;
-  }
-
-  .align-center-roadmap {
-    right: 523px;
-  }
-
-  .align-center-faq {
-    right: 420px;
-  }
-
-  .align-center-team {
-    right: 316px;
-  }
-}
-
-@media (max-width: 1070px) {
-  .align-center-prelude {
-    right: 634px;
-  }
-
-  .align-center-roadmap {
-    right: 481px;
-  }
-
-  .align-center-faq {
-    right: 378px;
-  }
-
-  .align-center-team {
-    right: 277px;
-  }
-}
-
-@media (max-width: 996px) {
-  .align-center-prelude {
-    right: 596px;
-  }
-
-  .align-center-roadmap {
-    right: 443px;
-  }
-
-  .align-center-faq {
-    right: 340px;
-  }
-
-  .align-center-team {
-    right: 244px;
-  }
-}
-
-@media (max-width: 941px) {
-  .align-center-prelude {
-    right: 559px;
-  }
-
-  .align-center-roadmap {
-    right: 450px;
-  }
-
-  .align-center-faq {
-    right: 382px;
-  }
-
-  .align-center-team {
-    right: 305px;
-  }
-}
-
-@media (max-width: 1510px) and (min-width: 1170px) {
-  .align-center-prelude {
-    right: 695px;
-  }
-
-  .align-center-roadmap {
-    right: 544px;
-  }
-
-  .align-center-faq {
-    right: 441px;
-  }
-
-  .align-center-team {
-    right: 341px;
-  }
-}
-
-@media (max-width: 1170px) and (min-width: 1410px) {
-  .align-center-prelude {
-    right: 892px;
-  }
-
-  .align-center-roadmap {
-    right: 745px;
-  }
-
-  .align-center-faq {
-    right: 642px;
-  }
-
-  .align-center-team {
-    right: 540px;
-  }
-}
-
-@media (max-width: 3000px) and (min-width: 2000px) {
-  .align-center-prelude {
-    right: 1203px;
-  }
-
-  .align-center-roadmap {
-    right: 1052px;
-  }
-
-  .align-center-faq {
-    right: 946px;
-  }
-
-  .align-center-team {
-    right: 832px;
   }
 }
 
@@ -721,7 +621,7 @@ label #cancel {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 30px 10px;
+  padding: 75px 10px;
 }
 
 .card {
@@ -736,4 +636,10 @@ label #cancel {
 .single-card {
   margin: 10px;
   background-color: #c0ebff !important;
+}
+
+.css-h93ljk-MuiTypography-root,
+.css-r40f8v-MuiTypography-root,
+.css-om0qh7-MuiButtonBase-root-MuiButton-root {
+  font-family: "OrganicRelief", "Caveat Brush", cursive !important;
 }
