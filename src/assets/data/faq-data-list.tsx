@@ -1,6 +1,6 @@
 export const data = [
   {
-    question: "What is PastelPeepsNFT?",
+    question: "What is Pastel Peeps NFT?",
     answer: `PastelPeepsNFT is a community driven project for NFT, DeFi,
         & Web 3 enthusiasts with a focus to create a community
         where our holders get the best tools to navigate through the
@@ -82,7 +82,7 @@ export const data = [
         earnings balance, and more from there.`,
   },
   {
-    question: `How much $PEEP rewards will I earn for each PastelPeepsNFT I
+    question: `How much $PEEP rewards will I earn for each Pastel Peeps NFT I
         stake?`,
     answer: `[REDACTED]`,
   },
@@ -100,7 +100,7 @@ export const data = [
         $Peep.`,
   },
   {
-    question: `Can I sell my PastelPeepsNFT while its staked?`,
+    question: `Can I sell my Pastel Peeps NFT while its staked?`,
     answer: `While it's staked, it's not available to sell. You can unstake
         at anytime within minutes, and then you can sell your Peep
         again.`,

@@ -139,7 +139,7 @@ const App = () => {
               <img src={item.imageSrc} alt="" />
             </div>
             <div className="inner-content-text">
-              <span className="nft-name">{item.name}</span>
+              {/* <span className="nft-name">{item.name}</span> */}
               <span className="nft-price">#{item.price}</span>
             </div>
             {/* <div className="inner-content-rating">
@@ -162,7 +162,7 @@ const App = () => {
               <img src={item.imageSrc} alt="" />
             </div>
             <div className="inner-content-text">
-              <span className="nft-name">{item.name}</span>
+              {/* <span className="nft-name">{item.name}</span> */}
               <span className="nft-price">#{item.price}</span>
             </div>
             {/* <div className="inner-content-rating">
@@ -186,9 +186,8 @@ const App = () => {
           <div className="staking-content">
             <span style={{ color: "#a6e3e1" }}>
               "The History we wrote, filled with colours and joy has been
-              stolen, it is up to the peeps to reclaim it"
+              stolen, it is up to the peeps to reclaim it" -Master Peep
             </span>
-            -Master Peep
             <p style={{ color: "#7d93e8" }}>
               In a world where colour once filled every nook and cranny, and the
               peeps lived happily A group of nefarious peeps have devised a way
@@ -348,6 +347,7 @@ const App = () => {
           </Card>
         </div>
       </div>
+      <br />
     </div>
   );
 };

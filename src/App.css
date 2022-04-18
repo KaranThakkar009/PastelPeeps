@@ -56,8 +56,15 @@ body::-webkit-scrollbar-thumb {
                             'embedded-opentype', and 'svg' */
 }
 
+@font-face {
+  font-family: "Pulang";
+  src: local("Pulang"), url(./assets/fonts/Pulang.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .main {
-  font-family: "OrganicRelief", "Caveat Brush", cursive;
+  font-family: "Pulang", "Caveat Brush", cursive;
   height: 100%;
   /* background-image: linear-gradient(
     360deg,
@@ -239,7 +246,7 @@ label #cancel {
 }
 
 .marquee-content {
-  height: 273px;
+  height: 245px;
   flex: 0 0 auto;
   background-color: #0000002d;
   margin: 0 5px;
@@ -250,7 +257,7 @@ label #cancel {
 }
 
 .marquee-content2 {
-  height: 273px;
+  height: 245px;
   flex: 0 0 auto;
   background-color: #0000002d;
   margin: 0 5px;
@@ -292,7 +299,7 @@ label #cancel {
 
 .nft-price {
   color: white;
-  font-size: x-small;
+  font-size: large;
 }
 
 @keyframes scrollX {
@@ -353,7 +360,7 @@ label #cancel {
 .prelude-title {
   padding-bottom: 2rem;
   font-size: 4rem;
-  font-family: "OrganicRelief", "Caveat Brush", cursive;
+  font-family: "Pulang", "Caveat Brush", cursive;
 }
 
 .prelude-img {
@@ -395,7 +402,7 @@ label #cancel {
   background-color: transparent;
   border: none;
   align-self: center;
-  font-family: "OrganicRelief", "Caveat Brush", cursive;
+  font-family: "Pulang", "Caveat Brush", cursive;
   cursor: pointer;
   transition: all;
 }
@@ -405,7 +412,7 @@ label #cancel {
 }
 
 .modal-text {
-  font-family: "OrganicRelief", "Caveat Brush", cursive;
+  font-family: "Pulang", "Caveat Brush", cursive;
 }
 
 /* faq styles */
@@ -421,7 +428,7 @@ label #cancel {
 }
 
 .wrapper {
-  font-family: "OrganicRelief", "Caveat Brush", cursive;
+  font-family: "Pulang", "Caveat Brush", cursive;
   padding-top: 60px;
   width: 100%;
   display: flex;
@@ -641,5 +648,5 @@ label #cancel {
 .css-h93ljk-MuiTypography-root,
 .css-r40f8v-MuiTypography-root,
 .css-om0qh7-MuiButtonBase-root-MuiButton-root {
-  font-family: "OrganicRelief", "Caveat Brush", cursive !important;
+  font-family: "Pulang", "Caveat Brush", cursive !important;
 }
