@@ -19,6 +19,10 @@ import { FaEthereum } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
 import React from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
+import Fade from "react-reveal/Fade";
+import Bounce from "react-reveal/Bounce";
+import LightSpeed from "react-reveal/LightSpeed";
+import Slide from "react-reveal/Slide";
 
 const style = {
   position: "absolute" as "absolute",
@@ -179,174 +183,249 @@ const App = () => {
         ))}
       </div>
       {/* Prelude */}
-      <section className="prelude" id="prelude">
-        <div className="prelude-title">Prelude</div>
-        <div className="staking">
-          {/* <div className="staking-title">Staking</div> */}
-          <div className="staking-content">
-            <span style={{ color: "#a6e3e1" }}>
-              "The History we wrote, filled with colours and joy has been
-              stolen, it is up to the peeps to reclaim it" -Master Peep
-            </span>
-            <p style={{ color: "#7d93e8" }}>
-              In a world where colour once filled every nook and cranny, and the
-              peeps lived happily A group of nefarious peeps have devised a way
-              to steal the colours of the peeps. This not only made them dismal
-              and bleaker, but made the nefarious peeps stronger. This was when
-              the resistance was formed: To fight against the tyranny of the
-              nefarious peeps and to reclaim the colours they had once lost. As
-              time passed the resistance of 50 had grown into the thousands. The
-              peeps were now fed up of their colours being stolen.
-            </p>
-            <p style={{ color: "#cfdb8a" }}>
-              Soon word spread to the nefarious ones, “Nonsense! The peeps will
-              never come back for their colors. We have made them too weak to do
-              so!” A nefarious peep said with a smirk.
-            </p>
-            <p style={{ color: "#db8ab8" }}>
-              However, in due time, the peeps will prove otherwise and fight
-              towards bringing back their colour and bringing back the original
-              sense of community that was once loved by all.
-            </p>
-            <p style={{ color: "#de8c8c" }}>PastelPeeps is the resistance</p>
-            {/* <img className="prelude-img" src="prelude.png" alt="" /> */}
+      <Fade left>
+        <section className="prelude" id="prelude">
+          <div className="prelude-title">Prelude</div>
+          <div className="staking">
+            {/* <div className="staking-title">Staking</div> */}
+            <div className="staking-content">
+              <Fade left>
+                <span style={{ color: "#a6e3e1" }}>
+                  "The History we wrote, filled with colours and joy has been
+                  stolen, it is up to the peeps to reclaim it" -Master Peep
+                </span>
+              </Fade>
+              <Fade right>
+                <p style={{ color: "#7d93e8" }}>
+                  In a world where colour once filled every nook and cranny, and
+                  the peeps lived happily A group of nefarious peeps have
+                  devised a way to steal the colours of the peeps. This not only
+                  made them dismal and bleaker, but made the nefarious peeps
+                  stronger. This was when the resistance was formed: To fight
+                  against the tyranny of the nefarious peeps and to reclaim the
+                  colours they had once lost. As time passed the resistance of
+                  50 had grown into the thousands. The peeps were now fed up of
+                  their colours being stolen.
+                </p>
+              </Fade>
+              <Fade left>
+                <p style={{ color: "#cfdb8a" }}>
+                  Soon word spread to the nefarious ones, “Nonsense! The peeps
+                  will never come back for their colors. We have made them too
+                  weak to do so!” A nefarious peep said with a smirk.
+                </p>
+              </Fade>
+              <Fade right>
+                <p style={{ color: "#db8ab8" }}>
+                  However, in due time, the peeps will prove otherwise and fight
+                  towards bringing back their colour and bringing back the
+                  original sense of community that was once loved by all.
+                </p>
+              </Fade>
+              <Fade left>
+                <p style={{ color: "#de8c8c" }}>
+                  PastelPeeps is the resistance.
+                </p>
+              </Fade>
+              {/* <img className="prelude-img" src="prelude.png" alt="" /> */}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Fade>
       {/* Prelude ends */}
       {/* Roadmap */}
-      <div className="prelude" id="roadmap">
-        <div className="prelude-title">Roadmap</div>
-        <div className="staking">
-          {/* <div className="staking-title">Staking</div> */}
-          <div className="staking-content">
-            <img className="prelude-img" src="roadmap.jpg" alt="" />
-            <button className="read-more" onClick={handleOpen}>
-              Read more...
-            </button>
+      <Fade left>
+        <div className="prelude" id="roadmap">
+          <div className="prelude-title">Roadmap</div>
+          <div className="staking">
+            {/* <div className="staking-title">Staking</div> */}
+            <div className="staking-content">
+              <img className="prelude-img" src="roadmap.jpg" alt="" />
+              <button className="read-more" onClick={handleOpen}>
+                Read more...
+              </button>
+            </div>
           </div>
-        </div>
 
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style} className="modal-text">
-            {roadmapList.map((item, idx) => {
-              return (
-                <div key={idx}>
-                  <div style={{ fontWeight: "600" }}>{item.title}</div>
-                  <div>{item.description}</div>
-                  <br />
-                </div>
-              );
-            })}
-          </Box>
-        </Modal>
-      </div>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style} className="modal-text">
+              {roadmapList.map((item, idx) => {
+                return (
+                  <div key={idx}>
+                    <div style={{ fontWeight: "600" }}>{item.title}</div>
+                    <div>{item.description}</div>
+                    <br />
+                  </div>
+                );
+              })}
+            </Box>
+          </Modal>
+        </div>
+      </Fade>
       {/* Roadmap ends */}
       {/* FAQs section */}
-      <div className="wrapper" id="faq">
-        <div className="container">
-          <h3 className="faq-title">FAQs</h3>
-          <div className="accordion">
-            {data.map((item, idx) => (
-              <div className="item">
-                <div className="title" onClick={() => toggle(idx)}>
-                  <h2 className="title-h2">{item.question}</h2>
-                  <span className="accordion-icon">
-                    {selected === idx ? "-" : "+"}
-                  </span>
-                </div>
-                <div className={selected === idx ? "content show" : "content"}>
-                  {item.answer}
-                </div>
-              </div>
-            ))}
+      <Slide left>
+        <div className="wrapper" id="faq">
+          <div className="container">
+            <h3 className="faq-title">FAQs</h3>
+            <div className="accordion">
+              {data.map((item, idx) =>
+                idx % 2 == 0 ? (
+                  <Fade left>
+                    <div className="item">
+                      <div className="title" onClick={() => toggle(idx)}>
+                        <h2 className="title-h2">{item.question}</h2>
+                        <span className="accordion-icon">
+                          {selected === idx ? "-" : "+"}
+                        </span>
+                      </div>
+                      <div
+                        className={
+                          selected === idx ? "content show" : "content"
+                        }
+                      >
+                        {item.answer}
+                      </div>
+                    </div>
+                  </Fade>
+                ) : (
+                  <Fade right>
+                    <div className="item">
+                      <div className="title" onClick={() => toggle(idx)}>
+                        <h2 className="title-h2">{item.question}</h2>
+                        <span className="accordion-icon">
+                          {selected === idx ? "-" : "+"}
+                        </span>
+                      </div>
+                      <div
+                        className={
+                          selected === idx ? "content show" : "content"
+                        }
+                      >
+                        {item.answer}
+                      </div>
+                    </div>
+                  </Fade>
+                )
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </Slide>
       {/* FAQs ends */}
 
       {/* Team card */}
-      <div className="teams" id="team">
-        <div className="prelude-title">TEAM</div>
-        <div className="card">
-          <Card className="single-card" sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              height="250"
-              image={imagesDetails[0].imageSrc}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography
-                className="card-text"
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                Cryptozor
-              </Typography>
-              <Typography
-                className="card-text"
-                variant="body2"
-                color="text.secondary"
-              >
-                Come for the art, stay for the community
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Discord</Button>
-              <Button size="small">Twitter</Button>
-            </CardActions>
-          </Card>
-
-          <Card className="single-card" sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              height="250"
-              image={imagesDetails[1].imageSrc}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Cryptozor
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Come for the art, stay for the community
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Discord</Button>
-              <Button size="small">Twitter</Button>
-            </CardActions>
-          </Card>
-
-          <Card className="single-card" sx={{ maxWidth: 345 }}>
-            <CardMedia
-              component="img"
-              height="250"
-              image={imagesDetails[2].imageSrc}
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Cryptozor
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Come for the art, stay for the community
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Discord</Button>
-              <Button size="small">Twitter</Button>
-            </CardActions>
-          </Card>
+      <Fade left>
+        <div className="teams" id="team">
+          <div className="prelude-title">TEAM</div>
+          <div className="card">
+            <Card className="single-card" sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                height="250"
+                image={imagesDetails[0].imageSrc}
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography
+                  sx={{ fontFamily: "PaperNotes" }}
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                >
+                  Cryptozor
+                </Typography>
+                <Typography
+                  sx={{ fontFamily: "PaperNotes" }}
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  Come for the art, stay for the community
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button sx={{ fontFamily: "PaperNotes" }} size="small">
+                  Discord
+                </Button>
+                <Button sx={{ fontFamily: "PaperNotes" }} size="small">
+                  Twitter
+                </Button>
+              </CardActions>
+            </Card>
+            <Card className="single-card" sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                height="250"
+                image={imagesDetails[0].imageSrc}
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography
+                  sx={{ fontFamily: "PaperNotes" }}
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                >
+                  Cryptozor
+                </Typography>
+                <Typography
+                  sx={{ fontFamily: "PaperNotes" }}
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  Come for the art, stay for the community
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button sx={{ fontFamily: "PaperNotes" }} size="small">
+                  Discord
+                </Button>
+                <Button sx={{ fontFamily: "PaperNotes" }} size="small">
+                  Twitter
+                </Button>
+              </CardActions>
+            </Card>
+            <Card className="single-card" sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                height="250"
+                image={imagesDetails[0].imageSrc}
+                alt="green iguana"
+              />
+              <CardContent>
+                <Typography
+                  sx={{ fontFamily: "PaperNotes" }}
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                >
+                  Cryptozor
+                </Typography>
+                <Typography
+                  sx={{ fontFamily: "PaperNotes" }}
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  Come for the art, stay for the community
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button sx={{ fontFamily: "PaperNotes" }} size="small">
+                  Discord
+                </Button>
+                <Button sx={{ fontFamily: "PaperNotes" }} size="small">
+                  Twitter
+                </Button>
+              </CardActions>
+            </Card>
+          </div>
         </div>
-      </div>
+      </Fade>
       <br />
     </div>
   );
