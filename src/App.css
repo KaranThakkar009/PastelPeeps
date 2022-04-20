@@ -16,7 +16,7 @@
     #4ebce7 80%,
     #f2c9f5 100%
   );
-  --background-color1: #81e7ff;
+  --background-color1: #83e2f8;
   --background-color2: #ffa9d4;
   --background-color3: #9aff80;
   --background-color4: #f96d6b;
@@ -89,16 +89,8 @@ body::-webkit-scrollbar-thumb {
     #f2c9f5 100%
   ); */
   background: #000428; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #004e92,
-    #030d6e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #004e92,
-    #030d6e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #004e92, #030d6e);
+  background: linear-gradient(to right, #004e92, #030d6e);
 
   background-repeat: no-repeat;
   background-position: center;
@@ -324,13 +316,13 @@ label #cancel {
   }
   100% {
     /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
-    transform: translateX(calc(-1 * 11 * 200px));
+    transform: translateX(calc(-1 * 22 * 200px));
   }
 }
 
 @keyframes scrollX2 {
   0% {
-    transform: translateX(calc(-1 * 11 * 200px));
+    transform: translateX(calc(-1 * 22 * 200px));
   }
   100% {
     /* -280vw = no.of images to display * width of each image(20vw) = 14*20=280vw */
@@ -435,6 +427,13 @@ label #cancel {
 
 /* faq styles */
 
+.faq-divider {
+  height: 300px;
+  width: 100%;
+  display: block;
+  background-color: var(--background-color1);
+}
+
 .faq-title {
   margin: 20px 0;
   display: flex;
@@ -456,6 +455,7 @@ label #cancel {
   justify-content: center;
   flex-shrink: 0;
   flex-direction: column;
+  background-color: var(--background-color1);
 }
 
 .container {

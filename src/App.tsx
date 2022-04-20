@@ -9,11 +9,9 @@ import logo from "./assets/LOGO.png";
 import twitterLogo from "./assets/twitter2.png";
 import discordLogo from "./assets/discord2.png";
 import notionLogo from "./assets/notion8.png";
-import {
-  imagesDetails,
-  imagesDetails2,
-} from "./assets/scroll-animations/imagesDetails";
+import { imagesDetails } from "./assets/scroll-animations/imagesDetails";
 import { roadmapList } from "./assets/data/roadmap-list";
+import Faq_Div from "./assets/FAQ_Div.png";
 import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
@@ -33,9 +31,9 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  width: "500px",
+  width: "670px",
   maxWidth: "100%",
-  height: "300px",
+  height: "350px",
   overflowY: "scroll",
 };
 
@@ -160,7 +158,7 @@ const App = () => {
         ))}
       </div>
       <div className="marquee">
-        {imagesDetails2.map((item, idx) => (
+        {imagesDetails.map((item, idx) => (
           <div className="marquee-content2">
             <div className="inner-content-img">
               <img src={item.imageSrc} alt="" />
@@ -257,7 +255,11 @@ const App = () => {
               {roadmapList.map((item, idx) => {
                 return (
                   <div key={idx}>
-                    <div style={{ fontWeight: "600" }}>{item.title}</div>
+                    <div
+                      style={{ fontWeight: "600", textDecoration: "underline" }}
+                    >
+                      {item.title}
+                    </div>
                     <div>{item.description}</div>
                     <br />
                   </div>
@@ -271,6 +273,7 @@ const App = () => {
       {/* FAQs section */}
       <Slide left>
         <div className="wrapper" id="faq">
+          <img src={Faq_Div} alt="page divider" className="faq-divider" />
           <div className="container">
             <h3 className="faq-title">FAQs</h3>
             <div className="accordion">
