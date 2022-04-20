@@ -356,7 +356,6 @@ label #cancel {
 }
 
 /* Prelude styles */
-
 .prelude {
   display: flex;
   justify-content: center;
@@ -431,7 +430,24 @@ label #cancel {
   height: 300px;
   width: 100%;
   display: block;
-  background-color: var(--background-color1);
+}
+
+.teams-divider {
+  height: 300px;
+  width: 100%;
+  display: block;
+}
+
+.roadmap-divider {
+  height: 300px;
+  width: 100%;
+  display: block;
+}
+
+.prelude-divider {
+  height: 300px;
+  width: 100%;
+  display: block;
 }
 
 .faq-title {
@@ -441,7 +457,7 @@ label #cancel {
   justify-content: center;
   font-size: 2.5rem;
   font-weight: 400;
-  color: #e6ccfa;
+  color: #000;
   font-family: "OrganicRelief";
   text-transform: uppercase;
 }
@@ -674,3 +690,15 @@ label #cancel {
 .css-om0qh7-MuiButtonBase-root-MuiButton-root {
   font-family: "Baloo-Regular" !important;
 } */
+
+#prelude {
+  background-color: var(--background-color2);
+}
+
+#roadmap {
+  background-color: var(--background-color3);
+}
+
+#team {
+  background-color: var(--background-color4);
+}

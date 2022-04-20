@@ -12,6 +12,9 @@ import notionLogo from "./assets/notion8.png";
 import { imagesDetails } from "./assets/scroll-animations/imagesDetails";
 import { roadmapList } from "./assets/data/roadmap-list";
 import Faq_Div from "./assets/FAQ_Div.png";
+import Roadmap_Div from "./assets/roadmap_div2.png";
+import Prelude_Div from "./assets/prelude_div.png";
+import Teams_Div from "./assets/teams_div.png";
 import { useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
@@ -31,9 +34,9 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  width: "670px",
+  width: "90%",
   maxWidth: "100%",
-  height: "350px",
+  height: "90%",
   overflowY: "scroll",
 };
 
@@ -59,14 +62,14 @@ const App = () => {
     <div className="main">
       {/* navbar section */}
       <nav>
-        <input type="checkbox" name="checkbox" id="check" />
-        <label className="checkbox-label" htmlFor="check">
-          <i className="fas fa-bars" id="btn"></i>
-          <i className="fas fa-times" id="cancel"></i>
+        <input type="checkbox" name="check" id="check" />
+        <label htmlFor="check" className="checkbox-label">
+          <i className="fas fa-bars" id="btn" aria-hidden="false"></i>
+          <i className="fas fa-times" id="cancel" aria-hidden="false"></i>
         </label>
         <div className="logo">
           <a href="https://pastelpeeps.netlify.app/">
-            <img className="logo-img" src={logo} alt="logo" />
+            <img className="logo-img" src={logo} alt="logo" loading="lazy" />
           </a>
         </div>
         <ul className="links-ul">
@@ -102,6 +105,7 @@ const App = () => {
                 className="discord discord-logo"
                 src={discordLogo}
                 alt="Discord Logo"
+                loading="lazy"
               />
             </a>
           </li>
@@ -115,6 +119,7 @@ const App = () => {
                 className="twitter-logo"
                 src={twitterLogo}
                 alt="Twitter Logo"
+                loading="lazy"
               />
             </a>
           </li>
@@ -128,6 +133,7 @@ const App = () => {
                 className="notion notion-logo"
                 src={notionLogo}
                 alt="Notion Logo"
+                loading="lazy"
               />
             </a>
           </li>
@@ -138,7 +144,7 @@ const App = () => {
         {imagesDetails.map((item, idx) => (
           <div className="marquee-content">
             <div className="inner-content-img">
-              <img src={item.imageSrc} alt="" />
+              <img src={item.imageSrc} alt="" loading="lazy" />
             </div>
             <div className="inner-content-text">
               {/* <span className="nft-name">{item.name}</span> */}
@@ -161,7 +167,7 @@ const App = () => {
         {imagesDetails.map((item, idx) => (
           <div className="marquee-content2">
             <div className="inner-content-img">
-              <img src={item.imageSrc} alt="" />
+              <img src={item.imageSrc} alt="" loading="lazy" />
             </div>
             <div className="inner-content-text">
               {/* <span className="nft-name">{item.name}</span> */}
@@ -180,7 +186,9 @@ const App = () => {
           </div>
         ))}
       </div>
+
       {/* Prelude */}
+      {/* <img src={Prelude_Div} alt="page divider" className="prelude-divider" /> */}
       <Fade left>
         <section className="prelude" id="prelude">
           <div className="prelude-title">Prelude</div>
@@ -188,13 +196,13 @@ const App = () => {
             {/* <div className="staking-title">Staking</div> */}
             <div className="staking-content">
               <Fade left>
-                <span style={{ color: "#a6e3e1" }}>
+                <span style={{ color: "#000" }}>
                   "The History we wrote, filled with colours and joy has been
                   stolen, it is up to the peeps to reclaim it" -Master Peep
                 </span>
               </Fade>
               <Fade right>
-                <p style={{ color: "#7d93e8" }}>
+                <p style={{ color: "#000" }}>
                   In a world where colour once filled every nook and cranny, and
                   the peeps lived happily A group of nefarious peeps have
                   devised a way to steal the colours of the peeps. This not only
@@ -207,30 +215,34 @@ const App = () => {
                 </p>
               </Fade>
               <Fade left>
-                <p style={{ color: "#cfdb8a" }}>
+                <p style={{ color: "#000" }}>
                   Soon word spread to the nefarious ones, “Nonsense! The peeps
                   will never come back for their colors. We have made them too
                   weak to do so!” A nefarious peep said with a smirk.
                 </p>
               </Fade>
               <Fade right>
-                <p style={{ color: "#db8ab8" }}>
+                <p style={{ color: "#000" }}>
                   However, in due time, the peeps will prove otherwise and fight
                   towards bringing back their colour and bringing back the
                   original sense of community that was once loved by all.
                 </p>
               </Fade>
               <Fade left>
-                <p style={{ color: "#de8c8c" }}>
-                  PastelPeeps is the resistance.
-                </p>
+                <p style={{ color: "#000" }}>PastelPeeps is the resistance.</p>
               </Fade>
               {/* <img className="prelude-img" src="prelude.png" alt="" /> */}
             </div>
           </div>
+          {/* <img
+            src={Roadmap_Div}
+            alt="page divider"
+            className="roadmap-divider"
+          /> */}
         </section>
       </Fade>
       {/* Prelude ends */}
+
       {/* Roadmap */}
       <Fade left>
         <div className="prelude" id="roadmap">
@@ -238,7 +250,12 @@ const App = () => {
           <div className="staking">
             {/* <div className="staking-title">Staking</div> */}
             <div className="staking-content">
-              <img className="prelude-img" src="roadmap.jpg" alt="" />
+              <img
+                className="prelude-img"
+                src="roadmap.jpg"
+                alt=""
+                loading="lazy"
+              />
               <button className="read-more" onClick={handleOpen}>
                 Read more...
               </button>
@@ -267,13 +284,14 @@ const App = () => {
               })}
             </Box>
           </Modal>
+          {/* <img src={Faq_Div} alt="page divider" className="faq-divider" /> */}
         </div>
       </Fade>
       {/* Roadmap ends */}
+
       {/* FAQs section */}
       <Slide left>
         <div className="wrapper" id="faq">
-          <img src={Faq_Div} alt="page divider" className="faq-divider" />
           <div className="container">
             <h3 className="faq-title">FAQs</h3>
             <div className="accordion">
@@ -318,6 +336,7 @@ const App = () => {
               )}
             </div>
           </div>
+          {/* <img src={Teams_Div} alt="page divider" className="teams-divider" /> */}
         </div>
       </Slide>
       {/* FAQs ends */}
@@ -429,7 +448,6 @@ const App = () => {
           </div>
         </div>
       </Fade>
-      <br />
     </div>
   );
 };
