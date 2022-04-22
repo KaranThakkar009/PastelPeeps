@@ -18,7 +18,7 @@ ReactDOM.render(
       appId="431fEvikCt3f97Ko1jdXlNFfr3Cbz4LVsOZVQcUS"
       serverUrl="https://fdtlui2godsc.usemoralis.com:2053/server"
     >
-      <GoogleReCaptchaProvider
+      {/* <GoogleReCaptchaProvider
         reCaptchaKey="6LdwbnceAAAAAL2Ghcki-lJGKQLBbbWw-_apnxeA"
         language="[optional_language]"
         scriptProps={{
@@ -28,9 +28,9 @@ ReactDOM.render(
           nonce: undefined, // optional, default undefined
           // secret 6LdwbnceAAAAACoCnXP-p4Gac7yLJJgjysMc-LLg
         }}
-      >
-        <App />
-      </GoogleReCaptchaProvider>
+      > */}
+      <App />
+      {/* </GoogleReCaptchaProvider> */}
     </MoralisProvider>
   </ThemeProvider>,
   document.querySelector("#root")

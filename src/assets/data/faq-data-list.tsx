@@ -1,6 +1,6 @@
 export const data = [
   {
-    question: "What is PastelPeepsNFT?",
+    question: "What is Pastel Peeps NFT?",
     answer: `PastelPeepsNFT is a community driven project for NFT, DeFi,
         & Web 3 enthusiasts with a focus to create a community
         where our holders get the best tools to navigate through the
@@ -26,12 +26,16 @@ export const data = [
   },
   {
     question: `What is the mint price?`,
-    answer: `Whitelist Mint Price ➡️ .044+ gas fee Public Mint Price➡️
-        .055+ Gas fee`,
+    answer: (
+      <p>
+        Whitelist Mint Price ➡️ .044Eth + Gas fee
+        <br /> Public Mint Price➡️ .055Eth + Gas fee.
+      </p>
+    ),
   },
   {
     question: `How many can I mint?`,
-    answer: `3 Per Transaction, 6 Per Wallet`,
+    answer: <p>10 Per Transaction, 10 max per wallet.</p>,
   },
   {
     question: `Is Fortune 50 the same as whitelist?`,
@@ -43,11 +47,18 @@ export const data = [
   },
   {
     question: `What are the future benefits of Fortune50?`,
-    answer: `Access to the restricted Fortune50 chat which consists of
-        exceptional Members of the community. If you like Networking,
-        this is where you want to be. A Custom Pfp Handrawn by our
-        Artist Extra Entries to Whitelist Raffles on Our Discord
-        [REDACTED] [REDACTED] [REDACTED]`,
+    answer: (
+      <p>
+        Access to the restricted Fortune50 chat which consists of exceptional
+        Members of the community. If you like Networking, this is where you want
+        to be. A Custom Pfp Handrawn by our Artist Extra Entries to Whitelist
+        Raffles on Our Discord.
+        <br />
+        [REDACTED]
+        <br /> [REDACTED]
+        <br /> [REDACTED]
+      </p>
+    ),
   },
   {
     question: `What rights do I have to the artwork?`,
@@ -82,7 +93,7 @@ export const data = [
         earnings balance, and more from there.`,
   },
   {
-    question: `How much $PEEP rewards will I earn for each PastelPeepsNFT I
+    question: `How much $PEEP rewards will I earn for each Pastel Peeps NFT I
         stake?`,
     answer: `[REDACTED]`,
   },
@@ -100,7 +111,7 @@ export const data = [
         $Peep.`,
   },
   {
-    question: `Can I sell my PastelPeepsNFT while its staked?`,
+    question: `Can I sell my Pastel Peeps NFT while its staked?`,
     answer: `While it's staked, it's not available to sell. You can unstake
         at anytime within minutes, and then you can sell your Peep
         again.`,
