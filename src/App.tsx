@@ -5,7 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 // import logo from "./assets/TWT_HEADER_9.jpg";
-import logo from "./assets/LOGO.png";
+import logo from "./assets/logo.png";
 import twitterLogo from "./assets/twitter2.png";
 import discordLogo from "./assets/discord2.png";
 import notionLogo from "./assets/notion8.png";
