@@ -16,7 +16,7 @@ import Roadmap_Div from "./assets/roadmap_div2.png";
 import Prelude_Div from "./assets/prelude_div.png";
 import Teams_Div from "./assets/teams_div.png";
 import { useState } from "react";
-import { FaEthereum } from "react-icons/fa";
+import { FaEthereum, FaTimes } from "react-icons/fa";
 import { BiHeart } from "react-icons/bi";
 import React from "react";
 import { Modal, Box, Typography, Button } from "@mui/material";
@@ -24,6 +24,7 @@ import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import LightSpeed from "react-reveal/LightSpeed";
 import Slide from "react-reveal/Slide";
+import { GoThreeBars } from "react-icons/go";
 
 const style = {
   position: "absolute" as "absolute",
@@ -62,10 +63,17 @@ const App = () => {
     <div className="main">
       {/* navbar section */}
       <nav>
-        <input type="checkbox" name="check" id="check" />
+        <input type="checkbox" name="checkbox" id="check" />
         <label htmlFor="check" className="checkbox-label">
-          <i className="fas fa-bars" id="btn" aria-hidden="false"></i>
-          <i className="fas fa-times" id="cancel" aria-hidden="false"></i>
+          <span id="btn">
+            <GoThreeBars />
+          </span>
+          <span id="cancel">
+            <FaTimes />
+          </span>
+          {/* <i className="fas fa-bars" id="btn"></i>
+          <i className="fas fa-times" id="cancel"></i> */}
+          {/*  */}
         </label>
         <div className="logo">
           <a href="https://pastelpeeps.netlify.app/">
