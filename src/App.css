@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 
 :root {
-  --marquee-width: 100vw;
+  --marquee-width: -webkit-fill-available;
   --marquee-height: fit-content;
   --marquee-elements: 14;
   --marquee-elements-displayed: 5;

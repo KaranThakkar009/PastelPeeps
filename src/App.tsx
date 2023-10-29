@@ -24,7 +24,7 @@ import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import LightSpeed from "react-reveal/LightSpeed";
 import Slide from "react-reveal/Slide";
-import { GoThreeBars } from "react-icons/go";
+import { FaBars } from "react-icons/fa";
 
 const style = {
   position: "absolute" as "absolute",
@@ -66,7 +66,7 @@ const App = () => {
         <input type="checkbox" name="checkbox" id="check" />
         <label htmlFor="check" className="checkbox-label">
           <span id="btn">
-            <GoThreeBars />
+            <FaBars />
           </span>
           <span id="cancel">
             <FaTimes />
